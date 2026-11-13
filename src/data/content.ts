@@ -1,15 +1,19 @@
 import { DomainItem, GalleryPhoto, NewsArticle, ResourceItem, TestimonialItem } from '../types';
+import libraryClubImg from '../assets/images/library_reading_club_1794506120338.jpg';
+import workshopImg from '../assets/images/teacher_pedagogical_workshop_1794506120765.jpg';
+import distributionImg from '../assets/images/community_book_distribution_1794506119990.jpg';
+import digitalLibraryImg from '../assets/images/digital_library_technology_1794506121308.jpg';
 
-export const OPLEH_REAL_LOGO = '/public/assets/aistudio/image_50f9f44f.png';
-export const OPLEH_REAL_TEAM = '/public/assets/aistudio/image_d4b70868.png';
-export const OPLEH_REAL_PRESENTING = '/public/assets/aistudio/image_3d0f0124.png';
+export const OPLEH_REAL_LOGO = '/assets/aistudio/image_50f9f44f.png';
+export const OPLEH_REAL_TEAM = '/assets/aistudio/image_d4b70868.png';
+export const OPLEH_REAL_PRESENTING = '/assets/aistudio/image_3d0f0124.png';
 
 export const HERO_IMAGE = OPLEH_REAL_PRESENTING;
 export const TEAM_IMAGE = OPLEH_REAL_TEAM;
-export const LIBRARY_IMAGE = '/src/assets/images/library_reading_club_1794506120338.jpg';
-export const WORKSHOP_IMAGE = '/src/assets/images/teacher_pedagogical_workshop_1794506120765.jpg';
-export const DISTRIBUTION_IMAGE = '/src/assets/images/community_book_distribution_1794506119990.jpg';
-export const DIGITAL_IMAGE = '/src/assets/images/digital_library_technology_1794506121308.jpg';
+export const LIBRARY_IMAGE = libraryClubImg;
+export const WORKSHOP_IMAGE = workshopImg;
+export const DISTRIBUTION_IMAGE = distributionImg;
+export const DIGITAL_IMAGE = digitalLibraryImg;
 
 export const STATS_DATA = [
   { label: 'Écoles accompagnées', value: 48, prefix: '+', suffix: '', note: 'Dans 4 départements d\'Haïti' },

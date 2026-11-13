@@ -25,7 +25,14 @@ import { LightboxModal } from './components/LightboxModal';
 import { WWFPopupModal } from './components/WWFPopupModal';
 import { SearchModal } from './components/SearchModal';
 import { MotionReveal } from './components/MotionPrimitives';
-import { HERO_IMAGE, NEWS_DATA } from './data/content';
+import {
+  HERO_IMAGE,
+  NEWS_DATA,
+  LIBRARY_IMAGE,
+  WORKSHOP_IMAGE,
+  DISTRIBUTION_IMAGE,
+  DIGITAL_IMAGE,
+} from './data/content';
 import { GalleryPhoto, NavSection, NewsArticle, ResourceItem } from './types';
 import { BookOpen, Sparkles, Heart, ArrowRight } from 'lucide-react';
 
@@ -46,13 +53,28 @@ function getInitialPageFromHash(): NavSection {
   return VALID_PAGES.includes(hash) ? hash : 'accueil';
 }
 
+function normalizeImageUrl(url: string): string {
+  if (!url) return HERO_IMAGE;
+  if (url.startsWith('/public/assets/')) {
+    return url.replace('/public/assets/', '/assets/');
+  }
+  if (url.includes('library_reading_club_1794506120338.jpg')) return LIBRARY_IMAGE;
+  if (url.includes('teacher_pedagogical_workshop_1794506120765.jpg')) return WORKSHOP_IMAGE;
+  if (url.includes('community_book_distribution_1794506119990.jpg')) return DISTRIBUTION_IMAGE;
+  if (url.includes('digital_library_technology_1794506121308.jpg')) return DIGITAL_IMAGE;
+  return url;
+}
+
 function loadStoredArticles(): NewsArticle[] {
   try {
     const raw = localStorage.getItem(ARTICLES_STORAGE_KEY);
     if (!raw) return NEWS_DATA;
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed) && parsed.length > 0) {
-      return parsed;
+      return parsed.map((art: NewsArticle) => ({
+        ...art,
+        image: normalizeImageUrl(art.image),
+      }));
     }
     return NEWS_DATA;
   } catch {
