@@ -1,0 +1,8 @@
+{
+  "name": "OPLEH - Organisation pour la Promotion de la Lecture et de l'Écriture en Haïti",
+  "description": "Site officiel de l'OPLEH : raviver la passion des mots, développer l'esprit critique et soutenir les écoliers et enseignants en Haïti à travers la lecture et l'écriture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
