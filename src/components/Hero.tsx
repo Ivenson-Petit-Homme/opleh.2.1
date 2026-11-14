@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({
       : OPLEH_REAL_TEAM;
 
   return (
-    <section className="relative min-h-[88vh] flex items-center justify-center bg-black text-white pt-24 pb-16 overflow-hidden">
+    <section className="relative min-h-[88vh] flex items-center justify-center bg-[#080B33] text-white pt-24 pb-16 overflow-hidden">
       {/* Full-bleed Background Image (WWF France clean hero model) */}
       <motion.div
         key={activePhoto}
@@ -35,10 +35,10 @@ export const Hero: React.FC<HeroProps> = ({
         <img
           src={selectedImage}
           alt="Action de terrain OPLEH en Haïti"
-          className="w-full h-full object-cover object-center filter brightness-[0.72]"
+          className="w-full h-full object-cover object-center filter brightness-[0.75]"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/35" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/45 to-[#080B33]/35" />
       </motion.div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 text-center">
@@ -75,7 +75,7 @@ export const Hero: React.FC<HeroProps> = ({
 
             <button
               onClick={() => onNavigate('domaines')}
-              className="px-7 py-4 bg-black/55 hover:bg-black/80 border border-white/50 text-white font-wwf text-sm font-black uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer"
+              className="px-7 py-4 bg-[#0E134E]/75 hover:bg-[#080B33] border border-white/50 text-white font-wwf text-sm font-black uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer"
             >
               <span>DÉCOUVRIR NOS DOMAINES</span>
               <ArrowRight className="w-4 h-4" />
@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({
       </div>
 
       {/* Subtle Bottom-Center Photo Switcher */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-black/60 backdrop-blur-xs px-3 py-1.5 border border-white/15">
+      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-[#080B33]/80 backdrop-blur-xs px-3 py-1.5 border border-white/15">
         <button
           onClick={() => setActivePhoto('conference')}
           className={`px-2.5 py-1 text-[11px] font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer ${

@@ -71,7 +71,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   placeholder="Rechercher un article..."
-                  className="w-full pl-9 pr-3 py-2 text-xs bg-[#F5F5F5] border border-neutral-300 text-neutral-900 focus:outline-none focus:border-black"
+                  className="w-full pl-9 pr-3 py-2 text-xs bg-[#F5F5F5] border border-neutral-300 text-neutral-900 focus:outline-none focus:border-[#0E134E]"
                 />
               </div>
             </div>
@@ -101,7 +101,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                     onClick={() => onSelectArticle(leadArticle)}
                     className="grid grid-cols-1 lg:grid-cols-12 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
                   >
-                    <div className="lg:col-span-7 relative min-h-[280px] sm:min-h-[380px] bg-neutral-900 overflow-hidden">
+                    <div className="lg:col-span-7 relative min-h-[280px] sm:min-h-[380px] bg-[#080B33] overflow-hidden">
                       <img
                         src={leadArticle.image}
                         alt={leadArticle.title}
@@ -163,7 +163,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                         className="bg-white border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer h-full"
                       >
                         <div>
-                          <div className="relative h-52 overflow-hidden bg-neutral-900">
+                          <div className="relative h-52 overflow-hidden bg-[#080B33]">
                             <img
                               src={article.image}
                               alt={article.title}

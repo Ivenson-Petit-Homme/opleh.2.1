@@ -133,8 +133,8 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         onClick={() => setFrequency('monthly')}
                         className={`py-2.5 text-xs font-wwf font-black uppercase tracking-wider transition-colors cursor-pointer ${
                           frequency === 'monthly'
-                            ? 'bg-black text-white'
-                            : 'text-neutral-700 hover:text-black'
+                            ? 'bg-[#0E134E] text-white'
+                            : 'text-neutral-700 hover:text-[#0E134E]'
                         }`}
                       >
                         Don mensuel (Recommandé)
@@ -144,8 +144,8 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         onClick={() => setFrequency('once')}
                         className={`py-2.5 text-xs font-wwf font-black uppercase tracking-wider transition-colors cursor-pointer ${
                           frequency === 'once'
-                            ? 'bg-black text-white'
-                            : 'text-neutral-700 hover:text-black'
+                            ? 'bg-[#0E134E] text-white'
+                            : 'text-neutral-700 hover:text-[#0E134E]'
                         }`}
                       >
                         Don ponctuel
@@ -172,7 +172,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                             className={`py-3 px-2 text-center font-wwf font-black text-base transition-all border cursor-pointer ${
                               isSelected
                                 ? 'bg-[#E0291D] text-white border-[#E0291D] shadow-sm'
-                                : 'bg-white text-neutral-800 border-neutral-300 hover:border-black'
+                                : 'bg-white text-neutral-800 border-neutral-300 hover:border-[#0E134E]'
                             }`}
                           >
                             {amt} $
@@ -192,7 +192,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         placeholder="Autre montant..."
                         value={customAmount}
                         onChange={(e) => setCustomAmount(e.target.value)}
-                        className="w-full pl-28 pr-4 py-2.5 text-xs bg-white border border-neutral-300 text-neutral-900 font-semibold focus:outline-none focus:border-black"
+                        className="w-full pl-28 pr-4 py-2.5 text-xs bg-white border border-neutral-300 text-neutral-900 font-semibold focus:outline-none focus:border-[#0E134E]"
                       />
                     </div>
                   </div>
@@ -217,11 +217,11 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         onClick={() => setPaymentMethod('card')}
                         className={`p-3 border text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-1 ${
                           paymentMethod === 'card'
-                            ? 'border-black bg-white text-black font-bold'
+                            ? 'border-[#0E134E] bg-white text-[#0E134E] font-bold'
                             : 'border-neutral-300 bg-white text-neutral-600 hover:border-neutral-500'
                         }`}
                       >
-                        <CreditCard className="w-4 h-4 text-neutral-900" />
+                        <CreditCard className="w-4 h-4 text-[#0E134E]" />
                         <span className="text-xs">Carte (Visa/MC)</span>
                       </button>
 
@@ -256,11 +256,11 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         onClick={() => setPaymentMethod('bank')}
                         className={`p-3 border text-center transition-all cursor-pointer flex flex-col items-center justify-center gap-1 ${
                           paymentMethod === 'bank'
-                            ? 'border-black bg-neutral-100 text-black font-bold'
+                            ? 'border-[#0E134E] bg-blue-50 text-[#0E134E] font-bold'
                             : 'border-neutral-300 bg-white text-neutral-600 hover:border-neutral-500'
                         }`}
                       >
-                        <Building className="w-4 h-4 text-neutral-800" />
+                        <Building className="w-4 h-4 text-[#0E134E]" />
                         <span className="text-xs">Virement</span>
                       </button>
                     </div>
@@ -334,7 +334,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
             </MotionReveal>
 
             {/* Module 2: DEVENIR BÉNÉVOLE */}
-            <MotionReveal direction="up" delay={0.12} className="lg:col-span-5 bg-[#111111] text-white p-6 sm:p-10 shadow-sm border border-neutral-800 border-t-4 border-t-[#E0291D] flex flex-col justify-between">
+            <MotionReveal direction="up" delay={0.12} className="lg:col-span-5 bg-[#0E134E] text-white p-6 sm:p-10 shadow-sm border border-[#1E2985] border-t-4 border-t-[#E0291D] flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-11 h-11 bg-[#E0291D] text-white flex items-center justify-center shrink-0">
@@ -344,21 +344,21 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                     <h2 className="text-2xl sm:text-3xl font-black font-wwf uppercase text-white">
                       Devenir Bénévole
                     </h2>
-                    <p className="text-xs text-neutral-400">
+                    <p className="text-xs text-blue-200/80">
                       Mettez votre talent au service des écoliers haïtiens
                     </p>
                   </div>
                 </div>
 
                 {volunteerSubmitted ? (
-                  <div className="p-8 text-center bg-neutral-900 border border-neutral-700">
+                  <div className="p-8 text-center bg-[#080B33] border border-[#1E2985]">
                     <div className="w-12 h-12 bg-[#E0291D] text-white rounded-full flex items-center justify-center mx-auto mb-3">
                       <CheckCircle2 className="w-6 h-6" />
                     </div>
                     <h3 className="text-xl font-black font-wwf uppercase text-white mb-2">
                       Candidature reçue !
                     </h3>
-                    <p className="text-xs text-neutral-300 leading-relaxed mb-4">
+                    <p className="text-xs text-blue-100 leading-relaxed mb-4">
                       Merci {volunteerName || 'cher bénévole'} pour votre engagement citoyen. Notre équipe de coordination vous contactera très rapidement sur WhatsApp ou par courriel.
                     </p>
                     <button
@@ -371,7 +371,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                 ) : (
                   <form onSubmit={handleVolunteerSubmit} className="space-y-4">
                     <div>
-                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                      <label className="block text-[11px] font-semibold text-blue-100 mb-1">
                         Nom complet *
                       </label>
                       <input
@@ -380,13 +380,13 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         placeholder="Votre nom et prénom"
                         value={volunteerName}
                         onChange={(e) => setVolunteerName(e.target.value)}
-                        className="w-full px-3 py-2.5 text-xs bg-neutral-900 border border-neutral-700 text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#E0291D]"
+                        className="w-full px-3 py-2.5 text-xs bg-[#080B33] border border-[#253196] text-white placeholder:text-blue-200/45 focus:outline-none focus:border-[#E0291D]"
                       />
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <div>
-                        <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                        <label className="block text-[11px] font-semibold text-blue-100 mb-1">
                           Email *
                         </label>
                         <input
@@ -395,12 +395,12 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                           placeholder="vous@email.com"
                           value={volunteerEmail}
                           onChange={(e) => setVolunteerEmail(e.target.value)}
-                          className="w-full px-3 py-2.5 text-xs bg-neutral-900 border border-neutral-700 text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#E0291D]"
+                          className="w-full px-3 py-2.5 text-xs bg-[#080B33] border border-[#253196] text-white placeholder:text-blue-200/45 focus:outline-none focus:border-[#E0291D]"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                        <label className="block text-[11px] font-semibold text-blue-100 mb-1">
                           Téléphone / WhatsApp *
                         </label>
                         <input
@@ -409,19 +409,19 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                           placeholder="+509 ..."
                           value={volunteerPhone}
                           onChange={(e) => setVolunteerPhone(e.target.value)}
-                          className="w-full px-3 py-2.5 text-xs bg-neutral-900 border border-neutral-700 text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#E0291D]"
+                          className="w-full px-3 py-2.5 text-xs bg-[#080B33] border border-[#253196] text-white placeholder:text-blue-200/45 focus:outline-none focus:border-[#E0291D]"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                      <label className="block text-[11px] font-semibold text-blue-100 mb-1">
                         Département / Ville de résidence *
                       </label>
                       <select
                         value={volunteerDepartment}
                         onChange={(e) => setVolunteerDepartment(e.target.value)}
-                        className="w-full px-3 py-2.5 text-xs bg-neutral-900 border border-neutral-700 text-white focus:outline-none focus:border-[#E0291D]"
+                        className="w-full px-3 py-2.5 text-xs bg-[#080B33] border border-[#253196] text-white focus:outline-none focus:border-[#E0291D]"
                       >
                         <option>Ouest (Port-au-Prince, Delmas, Pétion-Ville)</option>
                         <option>Artibonite (Gonaïves, Saint-Marc)</option>
@@ -435,13 +435,13 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                      <label className="block text-[11px] font-semibold text-blue-100 mb-1">
                         Domaine d’action souhaité *
                       </label>
                       <select
                         value={volunteerSkill}
                         onChange={(e) => setVolunteerSkill(e.target.value)}
-                        className="w-full px-3 py-2.5 text-xs bg-neutral-900 border border-neutral-700 text-white focus:outline-none focus:border-[#E0291D]"
+                        className="w-full px-3 py-2.5 text-xs bg-[#080B33] border border-[#253196] text-white focus:outline-none focus:border-[#E0291D]"
                       >
                         <option>Animation de clubs de lecture & contes</option>
                         <option>Formation pédagogique des enseignants</option>
@@ -453,7 +453,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                     </div>
 
                     <div>
-                      <label className="block text-[11px] font-semibold text-neutral-300 mb-1">
+                      <label className="block text-[11px] font-semibold text-blue-100 mb-1">
                         Pourquoi souhaitez-vous vous engager avec l’OPLEH ?
                       </label>
                       <textarea
@@ -461,7 +461,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                         placeholder="Partagez vos motivations, votre parcours ou votre disponibilité..."
                         value={volunteerMotivation}
                         onChange={(e) => setVolunteerMotivation(e.target.value)}
-                        className="w-full px-3 py-2.5 text-xs bg-neutral-900 border border-neutral-700 text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#E0291D] resize-none"
+                        className="w-full px-3 py-2.5 text-xs bg-[#080B33] border border-[#253196] text-white placeholder:text-blue-200/45 focus:outline-none focus:border-[#E0291D] resize-none"
                       />
                     </div>
 
@@ -475,7 +475,7 @@ export const PartnershipSection: React.FC<PartnershipSectionProps> = ({ onNaviga
                 )}
               </div>
 
-              <div className="pt-6 border-t border-neutral-800 mt-6 text-[11px] text-neutral-400">
+              <div className="pt-6 border-t border-[#1E2985] mt-6 text-[11px] text-blue-200/75">
                 Chaque bénévole bénéficie d'une session d'accueil et d'un certificat d'engagement civique.
               </div>
             </MotionReveal>

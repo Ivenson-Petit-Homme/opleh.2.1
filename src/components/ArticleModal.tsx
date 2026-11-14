@@ -39,26 +39,26 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
       {/* Backdrop */}
       <div
-        className="fixed inset-0 bg-black/80 backdrop-blur-xs transition-opacity"
+        className="fixed inset-0 bg-[#080B33]/80 backdrop-blur-xs transition-opacity"
         onClick={onClose}
       />
 
       {/* Modal Dialog */}
       <div className="relative bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200 border-t-4 border-t-[#E0291D] z-10 flex flex-col">
         {/* Header Photo */}
-        <div className="relative h-64 sm:h-80 w-full bg-black shrink-0">
+        <div className="relative h-64 sm:h-80 w-full bg-[#080B33] shrink-0">
           <img
             src={article.image}
             alt={article.title}
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/25 to-[#080B33]/30" />
 
           {/* Close button */}
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 bg-black/70 text-white hover:bg-[#E0291D] transition-colors cursor-pointer"
+            className="absolute top-4 right-4 p-2 bg-[#0E134E]/80 text-white hover:bg-[#E0291D] transition-colors cursor-pointer"
             aria-label="Fermer l'article"
           >
             <X className="w-5 h-5" />

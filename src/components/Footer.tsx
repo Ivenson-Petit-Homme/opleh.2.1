@@ -23,9 +23,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
   };
 
   return (
-    <footer className="bg-black text-white relative font-sans">
-      {/* 1. Haut du footer: Bandeau d'engagement (Style WWF France) */}
-      <div className="bg-neutral-900 border-b border-neutral-800 py-12">
+    <footer className="bg-[#080B33] text-white relative font-sans">
+      {/* 1. Haut du footer: Bandeau d'engagement */}
+      <div className="bg-[#0E134E] border-b border-[#1E2985] py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-between">
             <div className="lg:col-span-7">
@@ -35,28 +35,28 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <h3 className="text-2xl sm:text-4xl font-black font-wwf uppercase text-white mb-2 tracking-tight">
                 Ensemble, nous sommes la solution pour l’avenir d’Haïti
               </h3>
-              <p className="text-xs sm:text-sm text-neutral-400 max-w-xl">
+              <p className="text-xs sm:text-sm text-blue-200/80 max-w-xl">
                 Recevez chaque mois nos lettres d'information, les nouveaux guides pédagogiques et les bilans d'action sur le terrain.
               </p>
             </div>
 
             <div className="lg:col-span-5">
               {newsletterSuccess ? (
-                <div className="flex items-center gap-2 p-3.5 bg-neutral-800 border border-emerald-500/50 text-emerald-300 text-xs font-medium">
+                <div className="flex items-center gap-2 p-3.5 bg-[#080B33] border border-emerald-500/50 text-emerald-300 text-xs font-medium">
                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>Merci pour votre inscription ! Vous recevrez notre prochain bulletin.</span>
                 </div>
               ) : (
                 <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                   <div className="relative flex-1">
-                    <Mail className="w-4 h-4 text-neutral-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                    <Mail className="w-4 h-4 text-blue-300/70 absolute left-3.5 top-1/2 -translate-y-1/2" />
                     <input
                       type="email"
                       required
                       placeholder="Votre adresse courriel..."
                       value={newsletterEmail}
                       onChange={(e) => setNewsletterEmail(e.target.value)}
-                      className="w-full pl-10 pr-3 py-3 bg-neutral-950 border border-neutral-700 text-xs text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#E0291D]"
+                      className="w-full pl-10 pr-3 py-3 bg-[#080B33] border border-[#253196] text-xs text-white placeholder:text-blue-200/50 focus:outline-none focus:border-[#E0291D]"
                     />
                   </div>
                   <button
@@ -73,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
       </div>
 
       {/* 2. Corps du footer: Structure 4 colonnes */}
-      <div className="py-16 border-b border-neutral-800">
+      <div className="py-16 border-b border-[#1E2985]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10">
             {/* Colonne 1: Logo officiel & Mission + Réseaux sociaux */}
@@ -82,13 +82,13 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                 <OPLEHLogo size={46} light={false} />
               </div>
 
-              <p className="text-xs text-neutral-400 leading-relaxed">
+              <p className="text-xs text-blue-100/80 leading-relaxed text-justify">
                 Organisme de Promotion de la Lecture et de l’Écriture en Haïti. Une organisation éducative citoyenne engagée pour doter chaque élève haïtien du pouvoir de lire, d’écrire et de penser par lui-même.
               </p>
 
               {/* Réseaux sociaux */}
               <div className="pt-2">
-                <span className="text-[11px] uppercase tracking-wider text-neutral-400 font-bold block mb-3 font-wwf">
+                <span className="text-[11px] uppercase tracking-wider text-blue-200/70 font-bold block mb-3 font-wwf">
                   Suivez notre action :
                 </span>
                 <div className="flex items-center gap-2.5">
@@ -103,7 +103,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-9 h-9 bg-neutral-900 border border-neutral-700 hover:border-[#E0291D] hover:text-[#E0291D] flex items-center justify-center text-xs font-bold text-neutral-300 transition-colors"
+                      className="w-9 h-9 bg-[#0E134E] border border-[#253196] hover:border-[#E0291D] hover:text-[#E0291D] flex items-center justify-center text-xs font-bold text-blue-100 transition-colors"
                       title={s.label}
                     >
                       {s.icon}
@@ -140,7 +140,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                     onClick={() => onNavigate('domaines')}
                     className="hover:text-white transition-colors cursor-pointer"
                   >
-                    Nos 6 Missions
+                    Nos 5 Missions
                   </button>
                 </li>
                 <li>
@@ -239,7 +239,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
       </div>
 
       {/* 3. Bas du footer */}
-      <div className="py-6 bg-black text-neutral-500 text-xs">
+      <div className="py-6 bg-[#060826] text-blue-200/60 text-xs">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3">
             <span>© 2026 OPLEH - Organisme de Promotion de la Lecture et de l'Écriture en Haïti.</span>
@@ -251,14 +251,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
             <span>Haïti · Caraïbes</span>
             <button
               onClick={() => onNavigate('admin')}
-              className="text-[10px] font-mono tracking-widest text-neutral-800 hover:text-neutral-500 transition-colors cursor-pointer select-none"
+              className="text-[10px] font-mono tracking-widest text-[#141D6B] hover:text-blue-300 transition-colors cursor-pointer select-none"
               aria-label="ADM"
             >
               ADM
             </button>
             <button
               onClick={scrollToTop}
-              className="p-1.5 bg-neutral-900 border border-neutral-700 hover:bg-neutral-800 text-neutral-300 hover:text-white transition-colors cursor-pointer"
+              className="p-1.5 bg-[#0E134E] border border-[#253196] hover:bg-[#151C66] text-blue-200 hover:text-white transition-colors cursor-pointer"
               aria-label="Retour en haut"
               title="Retour en haut"
             >

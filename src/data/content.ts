@@ -75,23 +75,8 @@ export const VALUES_DATA = [
 
 export const DOMAINS_DATA: DomainItem[] = [
   {
-    id: 'education-alphabetisation',
-    number: '01',
-    title: 'Éducation et alphabétisation',
-    summary: 'Poser les bases solides de la lecture dès le plus jeune âge pour libérer le potentiel d\'expression.',
-    description: 'L\'OPLEH croit fermement que le développement des compétences commence par un apprentissage précoce et soigné. Une fois cette compétence acquise, l\'enfant est naturellement incité à coucher ses réflexions sur papier : il écrit pour exprimer ses émotions, décrire son vécu et contribuer à la pensée collective. Nous éduquons les enfants sur l\'importance vitale de la lecture dans leur réussite scolaire et leur épanouissement personnel.',
-    image: HERO_IMAGE,
-    iconName: 'BookOpen',
-    levers: [
-      'Mise en place d’ateliers de formation et d’éveil à la lecture pour les écoliers haïtiens',
-      'Sensibilisation des parents sur le rôle capital de la lecture dans la réussite scolaire et l\'épanouissement',
-      'Distribution ciblée de manuels scolaires et de supports pédagogiques dans les établissements partenaires',
-      'Évaluation diagnostique des compétences de lecture pour adapter les parcours d’accompagnement',
-    ],
-  },
-  {
     id: 'formation-enseignants',
-    number: '02',
+    number: '01',
     title: 'Formation des enseignants',
     summary: 'Renforcer les compétences didactiques des éducateurs qui façonnent l’esprit des générations futures.',
     description: 'La place des enseignants est cruciale dans le développement intellectuel des enfants qui passent la majeure partie de leur journée avec eux. L\'OPLEH considère les professeurs comme les piliers de la transmission et collabore étroitement avec eux afin de moderniser et fortifier leurs pratiques pédagogiques en lecture et expression écrite.',
@@ -106,7 +91,7 @@ export const DOMAINS_DATA: DomainItem[] = [
   },
   {
     id: 'technologie-educative',
-    number: '03',
+    number: '02',
     title: 'Technologie éducative',
     summary: 'Démocratiser l’accès aux savoirs grâce au numérique et aux bibliothèques virtuelles.',
     description: 'Les innovations technologiques transforment les approches d’enseignement et ouvrent des opportunités inédites d’accès aux savoirs pour les enfants haïtiens. L\'OPLEH mobilise le numérique comme un formidable levier d’inclusion afin de dépasser les barrières matérielles et géographiques.',
@@ -121,7 +106,7 @@ export const DOMAINS_DATA: DomainItem[] = [
   },
   {
     id: 'approvisionnement-bibliotheques',
-    number: '04',
+    number: '03',
     title: 'Approvisionnement des bibliothèques',
     summary: 'Créer des sanctuaires de lecture chaleureux et approvisionnés en livres de qualité.',
     description: 'Les bibliothèques sont les foyers où les lecteurs se rassemblent, cultivent leur soif de savoir et élargissent leurs horizons intellectuels. L’accès direct à une variété de livres physiques demeure la condition première pour faire naître chez l’écolier le plaisir irrésistible de tourner les pages.',
@@ -136,7 +121,7 @@ export const DOMAINS_DATA: DomainItem[] = [
   },
   {
     id: 'promotion-culturelle',
-    number: '05',
+    number: '04',
     title: 'Promotion culturelle',
     summary: 'Valoriser les trésors de la littérature haïtienne et faire émerger les plumes de demain.',
     description: 'Promouvoir la lecture consiste à forger une culture durable qui célèbre nos auteurs et encourage l’enfant à chérir son patrimoine linguistique. À travers nos événements culturels, les jeunes découvrent les chefs-d’œuvre des écrivains haïtiens (Roumain, Frankétienne, Lahens, Trouillot) tout en explorant la littérature internationale.',
@@ -151,7 +136,7 @@ export const DOMAINS_DATA: DomainItem[] = [
   },
   {
     id: 'education-citoyenne',
-    number: '06',
+    number: '05',
     title: 'Éducation citoyenne',
     summary: 'Développer l’esprit critique et former des citoyens conscients, tolérants et engagés.',
     description: 'La lecture est un outil démocratique puissant pour développer la pensée critique et l’autonomie de jugement. L\'OPLEH encourage l\'engagement républicain et civique des jeunes en leur apprenant à analyser l\'information, à débattre avec rigueur et à défendre des valeurs de justice et de solidarité.',

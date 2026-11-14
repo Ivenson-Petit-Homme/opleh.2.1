@@ -29,8 +29,8 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
     <div className="bg-white">
       <PageHero
         kicker="Axes d’Action Stratégique"
-        title="Nos 6 Domaines d’Intervention"
-        subtitle="OPLEH fait choix de six domaines complémentaires visant à bâtir une génération de jeunes Haïtiens autonomes intellectuellement, capables de réfléchir, d’innover et de s’exprimer clairement."
+        title="Nos 5 Domaines d’Intervention"
+        subtitle="OPLEH fait choix de cinq domaines complémentaires visant à bâtir une génération de jeunes Haïtiens autonomes intellectuellement, capables de réfléchir, d’innover et de s’exprimer clairement."
         image={OPLEH_REAL_PRESENTING}
         breadcrumbLabel="Domaines d’intervention"
         onNavigate={onNavigate}
@@ -43,13 +43,13 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
             <div className="text-xs uppercase tracking-widest text-[#E0291D] font-bold mb-2 font-wwf">
               Exploration Interactive
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black font-wwf uppercase text-neutral-900 tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-5xl font-black font-wwf uppercase text-[#0E134E] tracking-tight leading-tight">
               Sélectionnez un axe pour explorer nos actions
             </h2>
           </MotionReveal>
 
-          {/* Interactive Domain Navigation Tabs */}
-          <StaggerGrid className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5 mb-8">
+          {/* Interactive Domain Navigation Tabs (5 domains) */}
+          <StaggerGrid className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
             {DOMAINS_DATA.map((domain) => {
               const isSelected = domain.id === selectedId;
               const Icon = iconsMap[domain.iconName] || BookOpen;
@@ -60,13 +60,13 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                     className={`w-full h-full p-4 text-left transition-all border flex flex-col justify-between cursor-pointer focus-visible:outline-none ${
                       isSelected
                         ? 'bg-[#E0291D] text-white border-[#E0291D] shadow-lg'
-                        : 'bg-white text-neutral-800 border-neutral-200 hover:border-black'
+                        : 'bg-white text-[#0E134E] border-neutral-200 hover:border-[#0E134E]'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-3 w-full">
                       <div
                         className={`w-8 h-8 flex items-center justify-center ${
-                          isSelected ? 'bg-black text-white' : 'bg-[#F5F5F5] text-[#E0291D]'
+                          isSelected ? 'bg-[#0E134E] text-white' : 'bg-[#F5F5F5] text-[#E0291D]'
                         }`}
                       >
                         <Icon className="w-4 h-4" />
@@ -109,13 +109,13 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                       <div className="text-xs font-wwf font-bold text-[#E0291D] uppercase tracking-widest">
                         Axe d'intervention {activeDomain.number}
                       </div>
-                      <h3 className="text-2xl sm:text-3xl font-black font-wwf uppercase text-neutral-900">
+                      <h3 className="text-2xl sm:text-3xl font-black font-wwf uppercase text-[#0E134E]">
                         {activeDomain.title}
                       </h3>
                     </div>
                   </div>
 
-                  <div className="text-sm font-bold text-neutral-900 mb-4 pb-3 border-b border-neutral-200">
+                  <div className="text-sm font-bold text-[#0E134E] mb-4 pb-3 border-b border-neutral-200">
                     {activeDomain.summary}
                   </div>
 
@@ -125,7 +125,7 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
 
                   {/* Action Levers */}
                   <div className="space-y-3 pt-2">
-                    <div className="text-xs uppercase tracking-wider font-black font-wwf text-neutral-900">
+                    <div className="text-xs uppercase tracking-wider font-black font-wwf text-[#0E134E]">
                       Leviers d’action concrets :
                     </div>
                     <div className="grid grid-cols-1 gap-2.5">
@@ -157,14 +157,14 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
               </div>
 
               {/* Right / Visual Column */}
-              <div className="lg:col-span-5 relative bg-black min-h-[320px] lg:min-h-full">
+              <div className="lg:col-span-5 relative bg-[#080B33] min-h-[320px] lg:min-h-full">
                 <img
                   src={activeDomain.image}
                   alt={activeDomain.title}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/25 to-transparent flex flex-col justify-end p-6 text-white">
                   <div className="text-xs font-wwf font-black text-[#E0291D] uppercase tracking-wider mb-1">
                     OPLEH sur le terrain
                   </div>
@@ -178,15 +178,15 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
         </div>
       </section>
 
-      {/* Complete Overview Grid of all 6 Domains */}
+      {/* Complete Overview Grid of all 5 Domains */}
       <section className="py-20 bg-white border-b border-neutral-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MotionReveal className="max-w-3xl mx-auto text-center mb-12">
             <div className="text-xs uppercase tracking-widest text-[#E0291D] font-bold mb-2 font-wwf">
               Vue d’Ensemble · Architecture Complète
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black font-wwf uppercase text-neutral-900 tracking-tight">
-              Les 6 piliers de transformation éducative
+            <h2 className="text-3xl sm:text-5xl font-black font-wwf uppercase text-[#0E134E] tracking-tight">
+              Les 5 piliers de transformation éducative
             </h2>
           </MotionReveal>
 
@@ -204,11 +204,11 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                     className={`border transition-all cursor-pointer flex flex-col justify-between h-full group ${
                       isSelected
                         ? 'border-[#E0291D] bg-[#F5F5F5] shadow-md'
-                        : 'border-neutral-200 bg-white hover:border-black hover:shadow-lg'
+                        : 'border-neutral-200 bg-white hover:border-[#0E134E] hover:shadow-lg'
                     }`}
                   >
                     <div>
-                      <div className="relative h-44 overflow-hidden bg-black">
+                      <div className="relative h-44 overflow-hidden bg-[#080B33]">
                         <img
                           src={domain.image}
                           alt={domain.title}
@@ -226,7 +226,7 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                             Programme OPLEH
                           </span>
                         </div>
-                        <h3 className="text-xl font-black font-wwf uppercase text-neutral-900 mb-2 group-hover:text-[#E0291D] transition-colors">
+                        <h3 className="text-xl font-black font-wwf uppercase text-[#0E134E] mb-2 group-hover:text-[#E0291D] transition-colors">
                           {domain.title}
                         </h3>
                         <p className="text-xs text-neutral-600 leading-relaxed line-clamp-3 text-justify">
@@ -235,7 +235,7 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                       </div>
                     </div>
                     <div className="px-6 pb-6 pt-2">
-                      <span className="text-xs font-wwf font-black uppercase tracking-wider text-neutral-900 group-hover:text-[#E0291D] inline-flex items-center gap-1.5">
+                      <span className="text-xs font-wwf font-black uppercase tracking-wider text-[#0E134E] group-hover:text-[#E0291D] inline-flex items-center gap-1.5">
                         <span>Explorer cet axe</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </span>

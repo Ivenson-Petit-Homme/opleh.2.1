@@ -33,11 +33,11 @@ export const TestimonialsSection: React.FC = () => {
               </div>
 
               <div className="flex items-center gap-3.5 pt-4 border-t border-neutral-200">
-                <div className="w-11 h-11 bg-black text-white flex items-center justify-center font-wwf font-black text-base shrink-0">
+                <div className="w-11 h-11 bg-[#0E134E] text-white flex items-center justify-center font-wwf font-black text-base shrink-0">
                   {t.avatarText}
                 </div>
                 <div>
-                  <div className="text-base font-bold text-neutral-900 font-wwf uppercase">
+                  <div className="text-base font-bold text-[#0E134E] font-wwf uppercase">
                     {t.name}
                   </div>
                   <div className="text-xs text-[#E0291D] font-semibold">

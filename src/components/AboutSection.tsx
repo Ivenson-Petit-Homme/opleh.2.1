@@ -56,21 +56,21 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
             </MotionReveal>
 
             <MotionReveal direction="up" delay={0.12} className="lg:col-span-5">
-              <div className="overflow-hidden shadow-xl border border-neutral-200 bg-neutral-950">
+              <div className="overflow-hidden shadow-xl border border-neutral-200 bg-[#080B33]">
                 <img
                   src={OPLEH_REAL_TEAM}
                   alt="L'Équipe fondatrice de l'OPLEH en Haïti"
                   className="w-full h-96 object-cover object-top"
                   referrerPolicy="no-referrer"
                 />
-                <div className="p-7 bg-black text-white border-t-4 border-[#E0291D]">
+                <div className="p-7 bg-[#0E134E] text-white border-t-4 border-[#E0291D]">
                   <div className="text-xs uppercase tracking-widest text-[#E0291D] font-black font-wwf mb-1">
                     Équipe Dirigeante & Fondateurs
                   </div>
                   <h3 className="text-2xl font-black font-wwf uppercase mb-3 tracking-tight">
                     Une initiative née des salles de classe
                   </h3>
-                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-blue-100 leading-relaxed mb-5 text-justify">
                     « Nous ne pouvions pas rester spectateurs face au découragement de nos élèves devant une feuille blanche. L’écriture est le pouvoir de dire le monde, de repenser la citoyenneté et de le réparer. »
                   </p>
                   <button
@@ -101,7 +101,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
 
           <StaggerGrid className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <StaggerItem>
-              <div className="p-8 sm:p-10 bg-[#111111] text-white border-t-4 border-[#E0291D] shadow-md h-full flex flex-col justify-between">
+              <div className="p-8 sm:p-10 bg-[#0E134E] text-white border-t-4 border-[#E0291D] shadow-md h-full flex flex-col justify-between">
                 <div>
                   <div className="w-12 h-12 bg-[#E0291D] text-white flex items-center justify-center mb-6">
                     <Target className="w-6 h-6" />
@@ -112,26 +112,26 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
                   <h3 className="text-3xl font-black font-wwf uppercase mb-4 tracking-tight">
                     Notre Mission
                   </h3>
-                  <p className="text-neutral-200 text-base leading-relaxed text-justify">
+                  <p className="text-blue-100 text-base leading-relaxed text-justify">
                     Développer et améliorer les capacités de lecture des élèves haïtiens en leur fournissant des ressources adaptées et tout le soutien nécessaire pour réussir leur parcours scolaire et personnel.
                   </p>
                 </div>
-                <div className="mt-8 pt-6 border-t border-neutral-800 text-xs text-neutral-400">
+                <div className="mt-8 pt-6 border-t border-[#1E2985] text-xs text-blue-200/80">
                   Action directe dans les écoles primaires, secondaires et espaces communautaires.
                 </div>
               </div>
             </StaggerItem>
 
             <StaggerItem>
-              <div className="p-8 sm:p-10 bg-white text-neutral-900 border border-neutral-200 border-t-4 border-black shadow-md h-full flex flex-col justify-between">
+              <div className="p-8 sm:p-10 bg-white text-[#0E134E] border border-neutral-200 border-t-4 border-t-[#0E134E] shadow-md h-full flex flex-col justify-between">
                 <div>
-                  <div className="w-12 h-12 bg-black text-white flex items-center justify-center mb-6">
+                  <div className="w-12 h-12 bg-[#0E134E] text-white flex items-center justify-center mb-6">
                     <Compass className="w-6 h-6 text-[#E0291D]" />
                   </div>
                   <div className="text-xs uppercase tracking-widest text-neutral-500 font-wwf font-bold mb-1">
                     Notre Horizon d'Impact
                   </div>
-                  <h3 className="text-3xl font-black font-wwf uppercase mb-4 tracking-tight">
+                  <h3 className="text-3xl font-black font-wwf uppercase mb-4 tracking-tight text-[#0E134E]">
                     Notre Vision
                   </h3>
                   <p className="text-neutral-700 text-base leading-relaxed text-justify">
@@ -164,15 +164,15 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
               const Icon = objectiveIcons[i % objectiveIcons.length];
               return (
                 <StaggerItem key={obj.num}>
-                  <div className="p-6 sm:p-8 bg-[#F5F5F5] border border-neutral-200 hover:border-black transition-colors flex gap-5 items-start h-full">
-                    <div className="w-12 h-12 bg-black text-white flex items-center justify-center shrink-0">
+                  <div className="p-6 sm:p-8 bg-[#F5F5F5] border border-neutral-200 hover:border-[#0E134E] transition-colors flex gap-5 items-start h-full">
+                    <div className="w-12 h-12 bg-[#0E134E] text-white flex items-center justify-center shrink-0">
                       <Icon className="w-5 h-5 text-[#E0291D]" />
                     </div>
                     <div>
                       <div className="text-xs font-wwf font-black uppercase tracking-widest text-[#E0291D] mb-1">
                         Objectif {obj.num}
                       </div>
-                      <h3 className="text-xl font-black font-wwf uppercase text-neutral-900 mb-2">
+                      <h3 className="text-xl font-black font-wwf uppercase text-[#0E134E] mb-2">
                         {obj.title}
                       </h3>
                       <p className="text-sm text-neutral-600 leading-relaxed text-justify">
@@ -188,7 +188,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
       </section>
 
       {/* 4. Nos Valeurs */}
-      <section className="py-20 bg-[#111111] text-white">
+      <section className="py-20 bg-[#080B33] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <MotionReveal className="max-w-3xl mx-auto text-center mb-12">
             <div className="text-xs uppercase tracking-widest text-[#E0291D] font-bold mb-2 font-wwf">
@@ -204,18 +204,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
               const Icon = valueIcons[idx % valueIcons.length];
               return (
                 <StaggerItem key={val.num}>
-                  <div className="p-6 bg-neutral-900 border border-neutral-800 hover:border-[#E0291D] transition-all flex flex-col justify-between h-full">
+                  <div className="p-6 bg-[#0E134E] border border-[#1E2985] hover:border-[#E0291D] transition-all flex flex-col justify-between h-full">
                     <div>
                       <div className="w-10 h-10 bg-[#E0291D] text-white flex items-center justify-center mb-4">
                         <Icon className="w-5 h-5" />
                       </div>
-                      <div className="text-[11px] font-wwf font-bold uppercase tracking-widest text-neutral-400 mb-1">
+                      <div className="text-[11px] font-wwf font-bold uppercase tracking-widest text-blue-200/70 mb-1">
                         Valeur {val.num}
                       </div>
                       <h3 className="text-lg font-black font-wwf uppercase text-white mb-2">
                         {val.title}
                       </h3>
-                      <p className="text-xs text-neutral-300 leading-relaxed text-justify">
+                      <p className="text-xs text-blue-100/85 leading-relaxed text-justify">
                         {val.desc}
                       </p>
                     </div>

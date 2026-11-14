@@ -107,7 +107,7 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Rechercher une fiche, un auteur..."
-                className="w-full pl-9 pr-3 py-2.5 text-xs bg-[#F5F5F5] border border-neutral-300 text-neutral-900 placeholder:text-neutral-500 focus:outline-none focus:border-black"
+                className="w-full pl-9 pr-3 py-2.5 text-xs bg-[#F5F5F5] border border-neutral-300 text-neutral-900 placeholder:text-neutral-500 focus:outline-none focus:border-[#0E134E]"
               />
             </div>
           </MotionReveal>
@@ -133,7 +133,7 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
                 const isDownloaded = downloadSuccessId === res.id;
                 return (
                   <StaggerItem key={res.id}>
-                    <div className="p-6 bg-white border border-neutral-200 hover:border-black hover:shadow-lg transition-all flex flex-col justify-between h-full">
+                    <div className="p-6 bg-white border border-neutral-200 hover:border-[#0E134E] hover:shadow-lg transition-all flex flex-col justify-between h-full">
                       <div>
                         <div className="flex items-center gap-2 text-xs text-neutral-500 font-medium mb-3">
                           <span className="text-[#E0291D] font-wwf font-black uppercase tracking-wider">
@@ -147,7 +147,7 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
                           <span>{res.pages} p.</span>
                         </div>
 
-                        <h3 className="text-xl font-black font-wwf uppercase text-neutral-900 mb-2 line-clamp-2 leading-snug">
+                        <h3 className="text-xl font-black font-wwf uppercase text-[#0E134E] mb-2 line-clamp-2 leading-snug">
                           {res.title}
                         </h3>
 
@@ -156,14 +156,14 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
                         </p>
 
                         <div className="text-[11px] text-neutral-600 bg-[#F5F5F5] border border-neutral-200 p-3 mb-6">
-                          <span className="font-bold text-neutral-900">Public :</span> {res.targetAudience}
+                          <span className="font-bold text-[#0E134E]">Public :</span> {res.targetAudience}
                         </div>
                       </div>
 
                       <div className="pt-4 border-t border-neutral-200 flex items-center justify-between gap-3">
                         <button
                           onClick={() => onSelectResource(res)}
-                          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#F5F5F5] hover:bg-neutral-200 text-neutral-900 font-wwf uppercase tracking-wider font-black text-xs transition-colors cursor-pointer"
+                          className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 bg-[#F5F5F5] hover:bg-neutral-200 text-[#0E134E] font-wwf uppercase tracking-wider font-black text-xs transition-colors cursor-pointer"
                         >
                           <Eye className="w-3.5 h-3.5" />
                           <span>Consulter</span>
@@ -174,7 +174,7 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
                           className={`flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 font-wwf uppercase tracking-wider font-black text-xs transition-colors cursor-pointer ${
                             isDownloaded
                               ? 'bg-emerald-600 text-white'
-                              : 'bg-black text-white hover:bg-[#E0291D]'
+                              : 'bg-[#0E134E] text-white hover:bg-[#E0291D]'
                           }`}
                         >
                           {isDownloaded ? (

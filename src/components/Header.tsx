@@ -31,6 +31,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'accueil', wwfLabel: 'ACCUEIL' },
     { id: 'apropos', wwfLabel: 'À PROPOS' },
     { id: 'domaines', wwfLabel: 'DOMAINES' },
+    { id: 'actualites', wwfLabel: 'ACTUALITÉS' },
     { id: 'ressources', wwfLabel: 'RESSOURCES' },
     { id: 'partenariat', wwfLabel: 'PARTENARIAT' },
     { id: 'contact', wwfLabel: 'CONTACT' },
@@ -51,7 +52,7 @@ export const Header: React.FC<HeaderProps> = ({
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-6">
+          <div className="flex items-center justify-between gap-4">
             {/* Zone 1: OPLEH Official Logo */}
             <button
               onClick={() => handleNavClick('accueil')}
@@ -61,12 +62,10 @@ export const Header: React.FC<HeaderProps> = ({
               <OPLEHLogo size={isScrolled ? 40 : 46} light={false} />
             </button>
 
-            {/* Zone 2: Exact 6 Pages Navigation Links (WWF France Style) */}
-            <nav className="hidden lg:flex items-center gap-6 xl:gap-8 font-wwf text-sm font-extrabold tracking-wider">
+            {/* Zone 2: Multi-Page Navigation Links (including ACTUALITÉS) */}
+            <nav className="hidden lg:flex items-center gap-5 xl:gap-7 font-wwf text-sm font-extrabold tracking-wider">
               {navItems.map((item) => {
-                const isActive =
-                  activeSection === item.id ||
-                  (item.id === 'accueil' && activeSection === 'actualites');
+                const isActive = activeSection === item.id;
                 return (
                   <button
                     key={item.id}
@@ -74,7 +73,7 @@ export const Header: React.FC<HeaderProps> = ({
                     className={`whitespace-nowrap shrink-0 transition-colors py-1 cursor-pointer focus-visible:outline-none relative ${
                       isActive
                         ? 'text-[#E0291D]'
-                        : 'text-neutral-900 hover:text-[#E0291D]'
+                        : 'text-[#0E134E] hover:text-[#E0291D]'
                     }`}
                   >
                     <span>{item.wwfLabel}</span>
@@ -86,11 +85,11 @@ export const Header: React.FC<HeaderProps> = ({
               })}
             </nav>
 
-            {/* Zone 3: Actions (Search + WWF FAIRE UN DON CTA + Mobile Menu Button) */}
+            {/* Zone 3: Actions (Search + FAIRE UN DON CTA + Mobile Menu Button) */}
             <div className="flex items-center gap-2.5 shrink-0">
               <button
                 onClick={onOpenSearch}
-                className="p-2 text-neutral-700 hover:text-black hover:bg-neutral-100 transition-colors cursor-pointer rounded"
+                className="p-2 text-[#0E134E] hover:text-[#E0291D] hover:bg-neutral-100 transition-colors cursor-pointer rounded"
                 title="Rechercher sur le site"
                 aria-label="Rechercher"
               >
@@ -107,7 +106,7 @@ export const Header: React.FC<HeaderProps> = ({
 
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden flex items-center gap-1.5 px-2.5 py-2 text-neutral-900 border border-neutral-300 font-wwf font-black text-xs uppercase cursor-pointer hover:bg-neutral-100 transition-colors"
+                className="lg:hidden flex items-center gap-1.5 px-2.5 py-2 text-[#0E134E] border border-[#0E134E]/30 font-wwf font-black text-xs uppercase cursor-pointer hover:bg-neutral-100 transition-colors"
                 aria-label="Menu"
               >
                 {mobileMenuOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
@@ -122,7 +121,7 @@ export const Header: React.FC<HeaderProps> = ({
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div
-            className="fixed inset-0 bg-black/70 backdrop-blur-xs"
+            className="fixed inset-0 bg-[#080B33]/80 backdrop-blur-xs"
             onClick={() => setMobileMenuOpen(false)}
           />
           <div className="fixed right-0 top-0 bottom-0 w-85 max-w-[90vw] bg-white p-6 shadow-2xl flex flex-col justify-between overflow-y-auto">
@@ -131,7 +130,7 @@ export const Header: React.FC<HeaderProps> = ({
                 <OPLEHLogo size={38} light={false} />
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 text-neutral-600 hover:text-black hover:bg-neutral-100 transition-colors"
+                  className="p-2 text-[#0E134E] hover:text-[#E0291D] hover:bg-neutral-100 transition-colors cursor-pointer"
                   aria-label="Fermer le menu"
                 >
                   <X className="w-6 h-6" />
@@ -145,10 +144,10 @@ export const Header: React.FC<HeaderProps> = ({
                     <button
                       key={item.id}
                       onClick={() => handleNavClick(item.id)}
-                      className={`text-left px-3 py-3 text-base font-extrabold uppercase tracking-wide flex items-center justify-between border-b border-neutral-100 ${
+                      className={`text-left px-3 py-3 text-base font-extrabold uppercase tracking-wide flex items-center justify-between border-b border-neutral-100 cursor-pointer ${
                         isActive
                           ? 'text-[#E0291D] bg-red-50/50'
-                          : 'text-neutral-900 hover:text-[#E0291D] hover:bg-neutral-50'
+                          : 'text-[#0E134E] hover:text-[#E0291D] hover:bg-neutral-50'
                       }`}
                     >
                       <span>{item.wwfLabel}</span>
@@ -156,17 +155,6 @@ export const Header: React.FC<HeaderProps> = ({
                     </button>
                   );
                 })}
-                <button
-                  onClick={() => handleNavClick('actualites')}
-                  className={`text-left px-3 py-3 text-base font-extrabold uppercase tracking-wide flex items-center justify-between border-b border-neutral-100 ${
-                    activeSection === 'actualites'
-                      ? 'text-[#E0291D] bg-red-50/50'
-                      : 'text-neutral-900 hover:text-[#E0291D] hover:bg-neutral-50'
-                  }`}
-                >
-                  <span>ACTUALITÉS</span>
-                  <ChevronRight className="w-4 h-4 text-neutral-400" />
-                </button>
               </nav>
             </div>
 
@@ -176,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({
                   setMobileMenuOpen(false);
                   onOpenDonate();
                 }}
-                className="wwf-btn-primary w-full py-3.5 text-center text-sm font-black flex items-center justify-center gap-2"
+                className="wwf-btn-primary w-full py-3.5 text-center text-sm font-black flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Heart className="w-4 h-4 fill-white" />
                 <span>FAIRE UN DON</span>

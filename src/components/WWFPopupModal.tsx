@@ -46,26 +46,26 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-sm animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-[#080B33]/85 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative bg-white rounded-none sm:rounded-xl max-w-2xl w-full max-h-[95vh] overflow-y-auto shadow-2xl border border-neutral-200 flex flex-col md:flex-row overflow-hidden">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 z-20 p-2 rounded-full bg-black/70 hover:bg-black text-white transition-colors cursor-pointer"
+          className="absolute top-3 right-3 z-20 p-2 rounded-full bg-[#0E134E]/80 hover:bg-[#E0291D] text-white transition-colors cursor-pointer"
           aria-label="Fermer"
         >
           <X className="w-5 h-5" />
         </button>
 
         {/* Left Visual Column (Style WWF France Campagne d'Urgence) */}
-        <div className="md:w-5/12 bg-neutral-900 relative min-h-[200px] md:min-h-full">
+        <div className="md:w-5/12 bg-[#080B33] relative min-h-[200px] md:min-h-full">
           <img
             src={OPLEH_REAL_TEAM}
             alt="Équipe fondatrice OPLEH sur le terrain"
             className="w-full h-full object-cover object-center"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#080B33] via-[#0E134E]/40 to-transparent" />
           <div className="absolute bottom-4 left-4 right-4 text-white">
             <span className="inline-block bg-[#E0291D] text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 mb-1.5 font-wwf">
               Urgence Éducation Haïti
@@ -73,7 +73,7 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
             <h4 className="font-wwf text-xl font-bold uppercase leading-tight">
               Agissons ensemble pour la jeunesse haïtienne
             </h4>
-            <p className="text-[11px] text-neutral-300 mt-1 leading-snug">
+            <p className="text-[11px] text-blue-100 mt-1 leading-snug">
               Chaque don équipe un écolier en livres et finance un club de lecture.
             </p>
           </div>
@@ -110,13 +110,13 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
                 </h3>
               </div>
 
-              {/* Frequency Selector (WWF Style) */}
+              {/* Frequency Selector */}
               <div className="grid grid-cols-2 gap-1 p-1 bg-neutral-100 text-xs font-bold font-wwf uppercase">
                 <button
                   type="button"
                   onClick={() => setFrequency('monthly')}
-                  className={`py-2 text-center transition-colors ${
-                    frequency === 'monthly' ? 'bg-black text-white' : 'text-neutral-700 hover:text-black'
+                  className={`py-2 text-center transition-colors cursor-pointer ${
+                    frequency === 'monthly' ? 'bg-[#0E134E] text-white' : 'text-neutral-700 hover:text-[#0E134E]'
                   }`}
                 >
                   Je donne tous les mois
@@ -124,8 +124,8 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
                 <button
                   type="button"
                   onClick={() => setFrequency('once')}
-                  className={`py-2 text-center transition-colors ${
-                    frequency === 'once' ? 'bg-black text-white' : 'text-neutral-700 hover:text-black'
+                  className={`py-2 text-center transition-colors cursor-pointer ${
+                    frequency === 'once' ? 'bg-[#0E134E] text-white' : 'text-neutral-700 hover:text-[#0E134E]'
                   }`}
                 >
                   Je donne une fois
@@ -142,10 +142,10 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
                       setAmount(val);
                       setCustomAmount('');
                     }}
-                    className={`py-2.5 text-center font-wwf font-black text-base border transition-all ${
+                    className={`py-2.5 text-center font-wwf font-black text-base border transition-all cursor-pointer ${
                       !customAmount && amount === val
                         ? 'bg-[#E0291D] text-white border-[#E0291D]'
-                        : 'bg-white text-neutral-800 border-neutral-300 hover:border-black'
+                        : 'bg-white text-neutral-800 border-neutral-300 hover:border-[#0E134E]'
                     }`}
                   >
                     {val} $
@@ -160,7 +160,7 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
                 placeholder="Autre montant libre ($)..."
                 value={customAmount}
                 onChange={(e) => setCustomAmount(e.target.value)}
-                className="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-black font-medium"
+                className="w-full px-3 py-2 text-xs border border-neutral-300 focus:outline-none focus:border-[#0E134E] font-medium"
               />
 
               {/* Payment methods */}
@@ -172,8 +172,8 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
                   <button
                     type="button"
                     onClick={() => setPaymentMethod('card')}
-                    className={`p-2 border text-[11px] font-bold text-center flex flex-col items-center justify-center gap-1 ${
-                      paymentMethod === 'card' ? 'border-black bg-neutral-50 text-black' : 'border-neutral-200 text-neutral-500'
+                    className={`p-2 border text-[11px] font-bold text-center flex flex-col items-center justify-center gap-1 cursor-pointer ${
+                      paymentMethod === 'card' ? 'border-[#0E134E] bg-blue-50/50 text-[#0E134E]' : 'border-neutral-200 text-neutral-500'
                     }`}
                   >
                     <CreditCard className="w-3.5 h-3.5" />

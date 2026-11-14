@@ -19,10 +19,10 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
       : GALLERY_DATA.filter((p) => p.category === filter);
 
   return (
-    <section className="py-24 bg-neutral-950 text-white border-b border-neutral-800">
+    <section className="py-24 bg-[#080B33] text-white border-b border-[#1E2985]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 pb-4 border-b border-neutral-800">
+        <MotionReveal className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 pb-4 border-b border-[#1E2985]">
           <div>
             <span className="text-xs uppercase font-bold tracking-widest text-[#E0291D] font-wwf block mb-1">
               Photothèques & Reportages
@@ -30,13 +30,13 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
             <h2 className="text-3xl sm:text-5xl font-black font-wwf uppercase text-white tracking-tight">
               L’action OPLEH en images
             </h2>
-            <p className="text-sm text-neutral-400 mt-1">
+            <p className="text-sm text-blue-200/80 mt-1">
               Des moments d’engagement citoyen et de lecture capturés dans les écoles partenaires en Haïti.
             </p>
           </div>
 
           {/* Filter tabs */}
-          <div className="flex flex-wrap items-center gap-1 bg-neutral-900 p-1 border border-neutral-800">
+          <div className="flex flex-wrap items-center gap-1 bg-[#0E134E] p-1 border border-[#1E2985]">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -44,7 +44,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
                 className={`px-3 py-1.5 text-xs font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
                   filter === cat
                     ? 'bg-[#E0291D] text-white'
-                    : 'text-neutral-400 hover:text-white hover:bg-neutral-800'
+                    : 'text-blue-200 hover:text-white hover:bg-[#151C66]'
                 }`}
               >
                 {cat === 'all' ? 'Toutes les photos' : cat}
@@ -59,7 +59,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
             <StaggerItem key={photo.id}>
               <div
                 onClick={() => onSelectPhoto(photo)}
-                className="group relative overflow-hidden bg-neutral-900 aspect-4/3 cursor-pointer border border-neutral-800 hover:border-[#E0291D] transition-all duration-300"
+                className="group relative overflow-hidden bg-[#0E134E] aspect-4/3 cursor-pointer border border-[#1E2985] hover:border-[#E0291D] transition-all duration-300"
               >
                 <img
                   src={photo.url}
@@ -68,17 +68,17 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
                   referrerPolicy="no-referrer"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080B33] via-[#0E134E]/35 to-transparent opacity-80 group-hover:opacity-95 transition-opacity" />
 
-                <div className="absolute top-3 right-3 w-8 h-8 bg-black/70 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute top-3 right-3 w-8 h-8 bg-[#080B33]/80 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <Maximize2 className="w-4 h-4" />
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-left">
                   <div className="flex items-center gap-2 text-[10px] text-[#E0291D] font-wwf font-black uppercase tracking-wider mb-1">
                     <span>{photo.category}</span>
-                    <span aria-hidden="true" className="text-neutral-500">·</span>
-                    <span className="flex items-center gap-1 text-neutral-300">
+                    <span aria-hidden="true" className="text-blue-300/60">·</span>
+                    <span className="flex items-center gap-1 text-blue-100">
                       <MapPin className="w-3 h-3 text-[#E0291D]" />
                       <span>{photo.location}</span>
                     </span>
@@ -86,7 +86,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
                   <h3 className="text-base sm:text-lg font-bold font-wwf uppercase text-white line-clamp-1">
                     {photo.title}
                   </h3>
-                  <p className="text-xs text-neutral-300 line-clamp-2 mt-1">
+                  <p className="text-xs text-blue-100/85 line-clamp-2 mt-1">
                     {photo.caption}
                   </p>
                 </div>

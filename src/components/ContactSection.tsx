@@ -50,7 +50,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
 
                 <div className="space-y-5 text-sm">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-black text-white flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 bg-[#0E134E] text-white flex items-center justify-center shrink-0">
                       <MapPin className="w-5 h-5 text-[#E0291D]" />
                     </div>
                     <div>
@@ -132,11 +132,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
                         rel="noopener noreferrer"
                         className="flex items-center gap-2.5 p-2.5 bg-[#F5F5F5] border border-neutral-200 hover:border-[#E0291D] hover:bg-red-50/40 transition-colors group"
                       >
-                        <span className="w-7 h-7 bg-black group-hover:bg-[#E0291D] text-white text-[11px] font-wwf font-black flex items-center justify-center transition-colors">
+                        <span className="w-7 h-7 bg-[#0E134E] group-hover:bg-[#E0291D] text-white text-[11px] font-wwf font-black flex items-center justify-center transition-colors">
                           {s.code}
                         </span>
                         <div className="min-w-0">
-                          <div className="text-xs font-bold text-neutral-900 truncate">{s.label}</div>
+                          <div className="text-xs font-bold text-[#0E134E] truncate">{s.label}</div>
                           <div className="text-[10px] text-neutral-500 truncate">{s.handle}</div>
                         </div>
                       </a>
@@ -146,7 +146,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
               </div>
 
               {/* Quick Community Note */}
-              <div className="p-6 bg-[#111111] text-white border-t-4 border-[#E0291D]">
+              <div className="p-6 bg-[#0E134E] text-white border-t-4 border-[#E0291D]">
                 <div className="flex items-center gap-2 text-xs font-wwf font-bold uppercase tracking-wider text-[#E0291D] mb-2">
                   <MessageSquare className="w-4 h-4" />
                   <span>Réseau d'écoles partenaires</span>
@@ -154,7 +154,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
                 <h3 className="font-black font-wwf uppercase text-xl mb-2">
                   Votre école souhaite rejoindre le réseau OPLEH ?
                 </h3>
-                <p className="text-xs text-neutral-300 leading-relaxed">
+                <p className="text-xs text-blue-100/85 leading-relaxed text-justify">
                   Précisez le nom de votre établissement, votre localité et le nombre approximatif d'élèves concernés dans le formulaire ci-contre.
                 </p>
               </div>

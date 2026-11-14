@@ -66,7 +66,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
     : RESOURCES_DATA.slice(0, 3);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-10 bg-black/80 backdrop-blur-xs">
+    <div className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-10 bg-[#080B33]/80 backdrop-blur-xs">
       <div
         className="fixed inset-0"
         onClick={onClose}
@@ -82,11 +82,11 @@ export const SearchModal: React.FC<SearchModalProps> = ({
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Rechercher un article, un domaine d'intervention, une fiche..."
-            className="flex-1 bg-transparent text-sm sm:text-base text-neutral-900 placeholder:text-neutral-500 focus:outline-none font-medium"
+            className="flex-1 bg-transparent text-sm sm:text-base text-[#0E134E] placeholder:text-neutral-500 focus:outline-none font-medium"
           />
           <button
             onClick={onClose}
-            className="p-2 text-neutral-600 hover:text-black hover:bg-neutral-200 transition-colors cursor-pointer"
+            className="p-2 text-[#0E134E] hover:text-[#E0291D] hover:bg-neutral-200 transition-colors cursor-pointer"
             aria-label="Fermer la recherche"
           >
             <X className="w-5 h-5" />
@@ -123,13 +123,13 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                       onClose();
                       onSelectArticle(art);
                     }}
-                    className="w-full text-left p-3 border border-neutral-200 hover:border-black bg-white hover:bg-[#F5F5F5] transition-colors flex items-center justify-between gap-4 cursor-pointer"
+                    className="w-full text-left p-3 border border-neutral-200 hover:border-[#0E134E] bg-white hover:bg-[#F5F5F5] transition-colors flex items-center justify-between gap-4 cursor-pointer"
                   >
                     <div className="min-w-0">
                       <div className="text-[11px] text-[#E0291D] font-wwf font-bold uppercase">
                         {art.category} · {art.date}
                       </div>
-                      <div className="text-sm font-bold text-neutral-900 truncate">
+                      <div className="text-sm font-bold text-[#0E134E] truncate">
                         {art.title}
                       </div>
                     </div>

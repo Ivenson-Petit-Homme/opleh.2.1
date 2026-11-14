@@ -179,11 +179,11 @@ export const AdminPage: React.FC<AdminPageProps> = ({
             /* Admin Login Gate */
             <MotionReveal className="max-w-md mx-auto bg-white border border-neutral-200 border-t-4 border-t-[#E0291D] p-8 shadow-lg">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-11 h-11 bg-black text-white flex items-center justify-center">
+                <div className="w-11 h-11 bg-[#0E134E] text-white flex items-center justify-center">
                   <Lock className="w-5 h-5 text-[#E0291D]" />
                 </div>
                 <div>
-                  <h2 className="font-wwf text-2xl font-black uppercase text-neutral-900">
+                  <h2 className="font-wwf text-2xl font-black uppercase text-[#0E134E]">
                     Connexion Administrateur
                   </h2>
                   <p className="text-xs text-neutral-500">
@@ -204,7 +204,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                     placeholder="••••••••"
                     value={passcodeInput}
                     onChange={(e) => setPasscodeInput(e.target.value)}
-                    className="w-full px-3.5 py-2.5 text-sm border border-neutral-300 bg-white text-neutral-900 focus:outline-none focus:border-black"
+                    className="w-full px-3.5 py-2.5 text-sm border border-neutral-300 bg-white text-neutral-900 focus:outline-none focus:border-[#0E134E]"
                   />
                 </div>
 
@@ -257,7 +257,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                   </button>
                   <button
                     onClick={handleLogout}
-                    className="px-4 py-2 bg-black hover:bg-neutral-800 text-white text-xs font-wwf font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer"
+                    className="px-4 py-2 bg-[#0E134E] hover:bg-[#080B33] text-white text-xs font-wwf font-bold uppercase tracking-wider flex items-center gap-1.5 cursor-pointer"
                   >
                     <LogOut className="w-3.5 h-3.5" />
                     <span>Déconnexion</span>
@@ -465,7 +465,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                     </div>
 
                     <article className="bg-white border border-neutral-200 overflow-hidden">
-                      <div className="relative h-52 bg-neutral-900 overflow-hidden">
+                      <div className="relative h-52 bg-[#080B33] overflow-hidden">
                         <img
                           src={image || OPLEH_REAL_PRESENTING}
                           alt="Aperçu"
@@ -551,7 +551,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                         <button
                           type="button"
                           onClick={() => onPreviewArticle(art)}
-                          className="px-3 py-2 bg-white border border-neutral-300 hover:border-black text-neutral-800 text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          className="px-3 py-2 bg-white border border-neutral-300 hover:border-[#0E134E] text-[#0E134E] text-xs font-bold flex items-center gap-1.5 cursor-pointer"
                           title="Lire l'article"
                         >
                           <Eye className="w-3.5 h-3.5" />
@@ -560,7 +560,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
                         <button
                           type="button"
                           onClick={() => handleEditClick(art)}
-                          className="px-3 py-2 bg-black hover:bg-neutral-800 text-white text-xs font-bold flex items-center gap-1.5 cursor-pointer"
+                          className="px-3 py-2 bg-[#0E134E] hover:bg-[#080B33] text-white text-xs font-bold flex items-center gap-1.5 cursor-pointer"
                           title="Modifier"
                         >
                           <Edit3 className="w-3.5 h-3.5" />

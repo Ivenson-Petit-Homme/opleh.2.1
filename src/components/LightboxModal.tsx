@@ -41,11 +41,11 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ photo, onClose, on
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-slate-950/95 backdrop-blur-md">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8 bg-[#080B33]/95 backdrop-blur-md">
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white z-50 transition-colors"
+        className="absolute top-6 right-6 p-2 rounded-full bg-white/10 hover:bg-[#E0291D] text-white z-50 transition-colors cursor-pointer"
         aria-label="Fermer la vue"
       >
         <X className="w-6 h-6" />
@@ -54,7 +54,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ photo, onClose, on
       {/* Prev / Next controls */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white z-50 transition-colors"
+        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#E0291D] text-white z-50 transition-colors cursor-pointer"
         aria-label="Photo précédente"
       >
         <ChevronLeft className="w-6 h-6" />
@@ -62,7 +62,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ photo, onClose, on
 
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-white/25 text-white z-50 transition-colors"
+        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/10 hover:bg-[#E0291D] text-white z-50 transition-colors cursor-pointer"
         aria-label="Photo suivante"
       >
         <ChevronRight className="w-6 h-6" />
@@ -70,7 +70,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({ photo, onClose, on
 
       {/* Main Image Container */}
       <div className="max-w-5xl w-full max-h-[85vh] flex flex-col items-center">
-        <div className="relative rounded-2xl overflow-hidden shadow-2xl max-h-[70vh] bg-black">
+        <div className="relative overflow-hidden shadow-2xl max-h-[70vh] bg-[#0E134E] border border-[#1E2985]">
           <img
             src={photo.url}
             alt={photo.title}

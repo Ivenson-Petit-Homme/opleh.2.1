@@ -51,14 +51,14 @@ export const NewsSection: React.FC<NewsSectionProps> = ({
               >
                 <div>
                   {/* Photo container */}
-                  <div className="relative h-56 overflow-hidden bg-neutral-900">
+                  <div className="relative h-56 overflow-hidden bg-[#080B33]">
                     <img
                       src={article.image}
                       alt={article.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/80 via-transparent to-transparent" />
                     <div className="absolute bottom-3 left-3 text-xs font-wwf font-black uppercase text-white bg-[#E0291D] px-2.5 py-1">
                       {article.category}
                     </div>

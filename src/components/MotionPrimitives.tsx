@@ -159,7 +159,7 @@ export const PageHero: React.FC<PageHeroProps> = ({
   onNavigate,
 }) => {
   return (
-    <section className="relative min-h-[380px] sm:min-h-[430px] flex items-end bg-black text-white pt-28 pb-14 overflow-hidden">
+    <section className="relative min-h-[380px] sm:min-h-[430px] flex items-end bg-[#080B33] text-white pt-28 pb-14 overflow-hidden">
       {/* Background visual with smooth zoom entrance */}
       <motion.div
         initial={{ scale: 1.06, opacity: 0.7 }}
@@ -170,11 +170,11 @@ export const PageHero: React.FC<PageHeroProps> = ({
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-cover object-center filter brightness-[0.65]"
+          className="w-full h-full object-cover object-center filter brightness-[0.68]"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#080B33] via-[#0E134E]/60 to-[#080B33]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#080B33]/90 via-[#0E134E]/45 to-transparent" />
       </motion.div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">

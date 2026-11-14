@@ -56,23 +56,20 @@ export const ResourceModal: React.FC<ResourceModalProps> = ({ resource, onClose 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
-      <div
-        className="fixed inset-0 bg-slate-950/75 backdrop-blur-sm transition-opacity"
-        onClick={onClose}
-      />
+      <div className="fixed inset-0 bg-[#080B33]/80 backdrop-blur-sm transition-opacity" onClick={onClose} />
 
-      <div className="relative bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-slate-200 z-10 flex flex-col">
+      <div className="relative bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200 border-t-4 border-t-[#E0291D] z-10 flex flex-col">
         {/* Top Header */}
-        <div className="p-6 bg-slate-900 text-white flex items-start justify-between gap-4 sticky top-0 z-20 border-b border-slate-800">
+        <div className="p-6 bg-[#0E134E] text-white flex items-start justify-between gap-4 sticky top-0 z-20 border-b border-[#1E2985]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-blue-700 flex items-center justify-center text-white shrink-0">
-              <BookOpen className="w-5 h-5 text-orange-400" />
+            <div className="w-10 h-10 bg-[#E0291D] flex items-center justify-center text-white shrink-0">
+              <BookOpen className="w-5 h-5 text-white" />
             </div>
             <div>
-              <div className="text-xs uppercase tracking-widest text-orange-400 font-bold">
+              <div className="text-xs uppercase tracking-widest text-[#E0291D] font-wwf font-bold">
                 {resource.categoryLabel} · {resource.format}
               </div>
-              <h2 className="text-lg sm:text-xl font-bold font-heading text-white line-clamp-1">
+              <h2 className="text-lg sm:text-xl font-black font-wwf uppercase text-white line-clamp-1">
                 {resource.title}
               </h2>
             </div>

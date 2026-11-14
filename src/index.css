@@ -27,7 +27,7 @@
 }
 
 .wwf-btn-dark {
-  background-color: #111827;
+  background-color: #0E134E;
   color: #ffffff;
   font-family: 'Barlow Condensed', sans-serif;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
   transition: all 0.2s ease;
 }
 .wwf-btn-dark:hover {
-  background-color: #000000;
+  background-color: #080B33;
 }
 
 /* Custom scrollbar */
