@@ -80,15 +80,10 @@ function loadStoredArticles(): NewsArticle[] {
       return parsed.map((art: NewsArticle) => {
         const normalized = normalizeImageUrl(art.image);
         const defaultImg = defaultsById.get(art.id);
-        const isLegacyDefault =
-          !normalized ||
-          normalized.includes('IMG_0422_b3264802.jpg') ||
-          normalized.includes('IMG_4148_2efedeef.JPG') ||
-          normalized.includes('library_reading_club') ||
-          normalized.includes('teacher_pedagogical_workshop');
+        const isCustomUpload = typeof art.image === 'string' && art.image.startsWith('data:image/');
         return {
           ...art,
-          image: defaultImg && isLegacyDefault ? defaultImg : normalized,
+          image: defaultImg && !isCustomUpload ? defaultImg : normalized,
         };
       });
     }

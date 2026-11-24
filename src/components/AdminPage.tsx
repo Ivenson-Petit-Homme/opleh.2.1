@@ -4,6 +4,9 @@ import {
   OPLEH_REAL_HERO,
   OPLEH_REAL_PRESENTING,
   OPLEH_REAL_TEAM,
+  NEWS_ANNIVERSARY_IMAGE,
+  NEWS_PEACE_DAY_IMAGE,
+  NEWS_CAUSERIES_IMAGE,
   LIBRARY_IMAGE,
   WORKSHOP_IMAGE,
   DISTRIBUTION_IMAGE,
@@ -39,6 +42,9 @@ interface AdminPageProps {
 const ADMIN_PASSCODE = 'OPLEH2026';
 
 const PRESET_IMAGES = [
+  { label: 'Premier anniversaire OPLEH (Club Franckétienne)', url: NEWS_ANNIVERSARY_IMAGE },
+  { label: 'Journée de la Paix aux Gonaïves', url: NEWS_PEACE_DAY_IMAGE },
+  { label: 'Causeries interactives Grand Nord', url: NEWS_CAUSERIES_IMAGE },
   { label: 'Équipe & Jeunes OPLEH (Photo d’accueil)', url: OPLEH_REAL_HERO },
   { label: 'Conférence OPLEH (Photo réelle)', url: OPLEH_REAL_PRESENTING },
   { label: 'Équipe fondatrice OPLEH (Photo réelle)', url: OPLEH_REAL_TEAM },

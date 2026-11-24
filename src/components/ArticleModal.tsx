@@ -50,7 +50,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
           <img
             src={article.image}
             alt={article.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/25 to-[#080B33]/30" />
