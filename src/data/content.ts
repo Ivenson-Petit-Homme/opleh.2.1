@@ -5,7 +5,7 @@ import distributionImg from '../assets/images/community_book_distribution_179450
 import digitalLibraryImg from '../assets/images/digital_library_technology_1794506121308.jpg';
 
 export const OPLEH_REAL_LOGO = '/assets/aistudio/image_50f9f44f.png';
-export const OPLEH_REAL_HERO = '/assets/aistudio/IMG_4148_2efedeef.JPG';
+export const OPLEH_REAL_HERO = '/assets/aistudio/IMG_0422_b3264802.jpg';
 export const OPLEH_REAL_TEAM = '/assets/aistudio/CTP_2847_copy_2517481d.jpg';
 export const OPLEH_REAL_PRESENTING = '/assets/aistudio/DSC_7031_copie.jpg_91621e11.jpeg';
 

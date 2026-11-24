@@ -60,6 +60,7 @@ function normalizeImageUrl(url: string): string {
   if (url.startsWith('/public/assets/')) {
     return url.replace('/public/assets/', '/assets/');
   }
+  if (url.includes('IMG_4148_2efedeef.JPG')) return HERO_IMAGE;
   if (url.includes('image_d4b70868.png')) return OPLEH_REAL_TEAM;
   if (url.includes('image_3d0f0124.png')) return OPLEH_REAL_PRESENTING;
   if (url.includes('library_reading_club_1794506120338.jpg')) return LIBRARY_IMAGE;
