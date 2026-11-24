@@ -32,6 +32,8 @@ import {
   WORKSHOP_IMAGE,
   DISTRIBUTION_IMAGE,
   DIGITAL_IMAGE,
+  OPLEH_REAL_TEAM,
+  OPLEH_REAL_PRESENTING,
 } from './data/content';
 import { GalleryPhoto, NavSection, NewsArticle, ResourceItem } from './types';
 import { BookOpen, Sparkles, Heart, ArrowRight } from 'lucide-react';
@@ -58,6 +60,8 @@ function normalizeImageUrl(url: string): string {
   if (url.startsWith('/public/assets/')) {
     return url.replace('/public/assets/', '/assets/');
   }
+  if (url.includes('image_d4b70868.png')) return OPLEH_REAL_TEAM;
+  if (url.includes('image_3d0f0124.png')) return OPLEH_REAL_PRESENTING;
   if (url.includes('library_reading_club_1794506120338.jpg')) return LIBRARY_IMAGE;
   if (url.includes('teacher_pedagogical_workshop_1794506120765.jpg')) return WORKSHOP_IMAGE;
   if (url.includes('community_book_distribution_1794506119990.jpg')) return DISTRIBUTION_IMAGE;
@@ -194,12 +198,12 @@ export default function App() {
                       <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-neutral-600 font-medium mb-8">
                         <span className="flex items-center gap-1.5 text-neutral-900 font-bold">
                           <Sparkles className="w-4 h-4 text-[#E0291D]" />
-                          Fondé par des enseignants haïtiens du secondaire
+                          Fondé par des étudiants, professionnels de l'éducation et des lecteurs
                         </span>
                         <span aria-hidden="true">·</span>
-                        <span>Port-au-Prince, Haïti</span>
+                        <span>Gonaïves, Caracol, Haïti</span>
                         <span aria-hidden="true">·</span>
-                        <span>Actions sur 4 départements</span>
+                        <span>Artibonite, Nord, Nord'Est</span>
                       </div>
                       <div className="flex flex-wrap items-center justify-center gap-3">
                         <button

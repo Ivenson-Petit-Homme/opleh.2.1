@@ -135,7 +135,7 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   return (
     <span ref={ref} className="tabular-nums">
       {prefix}
-      {displayValue.toLocaleString('fr-FR')}
+      {displayValue}
       {suffix}
     </span>
   );

@@ -21,10 +21,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
   };
 
   const socialLinks = [
-    { label: 'Facebook', code: 'FB', handle: '@OPLEHHaiti', href: 'https://facebook.com' },
-    { label: 'LinkedIn', code: 'IN', handle: 'OPLEH Haïti', href: 'https://linkedin.com' },
-    { label: 'X (Twitter)', code: 'X', handle: '@opleh_ht', href: 'https://x.com' },
-    { label: 'Instagram', code: 'IG', handle: '@opleh.haiti', href: 'https://instagram.com' },
+    { label: 'Facebook', code: 'FB', handle: '@espacedev.haiti', href: 'https://www.facebook.com/espacedev.haiti' },
+    {
+      label: 'LinkedIn',
+      code: 'IN',
+      handle: 'OPLEH Haïti',
+      href: 'https://www.linkedin.com/company/organisme-de-promotion-de-la-lecture-et-de-l-ecriture-en-haïti-opleh/?viewAsMember=true',
+    },
+    { label: 'X (Twitter)', code: 'X', handle: '@hople_haiti', href: 'https://x.com/hople_haiti' },
+    { label: 'Instagram', code: 'IG', handle: '@hople_haiti', href: 'https://www.instagram.com/hople_haiti/' },
   ];
 
   return (
@@ -58,7 +63,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
                         Coordination nationale & Antennes régionales
                       </div>
                       <p className="text-xs text-neutral-600 mt-0.5 leading-relaxed">
-                        Siège : Port-au-Prince (Ouest) · Antennes : Gonaïves (Artibonite), Limonade (Nord), Caracol (Nord-Est), République d'Haïti
+                        189, rue Christophe, Gonaïves (Artibonite) · P4N, Village EKAM, Caracol (Nord-Est), Haïti
                       </p>
                     </div>
                   </div>
@@ -70,12 +75,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
                     <div>
                       <div className="font-bold text-neutral-900">Téléphone & WhatsApp</div>
                       <a
-                        href="https://wa.me/50937000000"
+                        href="https://wa.me/50933777089"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-xs text-[#E0291D] font-bold hover:underline block mt-0.5"
                       >
-                        +509 37 00 0000 / +509 48 00 0000
+                        +509 33777089 / +509 31690811
                       </a>
                       <span className="text-[11px] text-neutral-500">
                         Permanence du lundi au vendredi, 8h00 - 16h00

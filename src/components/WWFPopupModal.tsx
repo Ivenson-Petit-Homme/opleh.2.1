@@ -68,7 +68,7 @@ export const WWFPopupModal: React.FC<WWFPopupModalProps> = ({ isOpen, onClose })
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B33] via-[#0E134E]/40 to-transparent" />
           <div className="absolute bottom-4 left-4 right-4 text-white">
             <span className="inline-block bg-[#E0291D] text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 mb-1.5 font-wwf">
-              Urgence Éducation Haïti
+              LIRE, ÉCRIRE, S'ÉPANOUIR
             </span>
             <h4 className="font-wwf text-xl font-bold uppercase leading-tight">
               Agissons ensemble pour la jeunesse haïtienne

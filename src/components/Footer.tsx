@@ -93,10 +93,14 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                 </span>
                 <div className="flex items-center gap-2.5">
                   {[
-                    { label: 'Facebook', icon: 'FB', href: 'https://facebook.com' },
-                    { label: 'LinkedIn', icon: 'IN', href: 'https://linkedin.com' },
-                    { label: 'X (Twitter)', icon: 'X', href: 'https://x.com' },
-                    { label: 'Instagram', icon: 'IG', href: 'https://instagram.com' },
+                    { label: 'Facebook', icon: 'FB', href: 'https://www.facebook.com/espacedev.haiti' },
+                    {
+                      label: 'LinkedIn',
+                      icon: 'IN',
+                      href: 'https://www.linkedin.com/company/organisme-de-promotion-de-la-lecture-et-de-l-ecriture-en-haïti-opleh/?viewAsMember=true',
+                    },
+                    { label: 'X (Twitter)', icon: 'X', href: 'https://x.com/hople_haiti' },
+                    { label: 'Instagram', icon: 'IG', href: 'https://www.instagram.com/hople_haiti/' },
                   ].map((s) => (
                     <a
                       key={s.label}
@@ -212,11 +216,11 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
               <div className="space-y-2 text-xs text-neutral-300">
                 <div className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 text-[#E0291D] shrink-0 mt-0.5" />
-                  <span>Siège : Port-au-Prince · Antennes : Gonaïves, Limonade, Caracol</span>
+                  <span>189, rue Christophe, Gonaïves · P4N, Village EKAM, Caracol</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Phone className="w-4 h-4 text-[#E0291D] shrink-0" />
-                  <span>+509 37 00 0000 / +509 48 00 0000</span>
+                  <span>+509 33777089 / +509 31690811</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[#E0291D] shrink-0" />

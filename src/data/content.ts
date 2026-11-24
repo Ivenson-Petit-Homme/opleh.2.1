@@ -6,8 +6,8 @@ import digitalLibraryImg from '../assets/images/digital_library_technology_17945
 
 export const OPLEH_REAL_LOGO = '/assets/aistudio/image_50f9f44f.png';
 export const OPLEH_REAL_HERO = '/assets/aistudio/IMG_4148_2efedeef.JPG';
-export const OPLEH_REAL_TEAM = '/assets/aistudio/image_d4b70868.png';
-export const OPLEH_REAL_PRESENTING = '/assets/aistudio/image_3d0f0124.png';
+export const OPLEH_REAL_TEAM = '/assets/aistudio/CTP_2847_copy_2517481d.jpg';
+export const OPLEH_REAL_PRESENTING = '/assets/aistudio/DSC_7031_copie.jpg_91621e11.jpeg';
 
 export const HERO_IMAGE = OPLEH_REAL_HERO;
 export const TEAM_IMAGE = OPLEH_REAL_TEAM;
@@ -17,10 +17,10 @@ export const DISTRIBUTION_IMAGE = distributionImg;
 export const DIGITAL_IMAGE = digitalLibraryImg;
 
 export const STATS_DATA = [
-  { label: 'Écoles accompagnées', value: 48, prefix: '+', suffix: '', note: 'Dans 4 départements d\'Haïti' },
-  { label: 'Élèves sensibilisés', value: 12500, prefix: '+', suffix: '', note: 'Primaire et secondaire' },
-  { label: 'Livres et manuels distribués', value: 8750, prefix: '+', suffix: '', note: 'Ouvrages en français & créole' },
-  { label: 'Ateliers et clubs actifs', value: 160, prefix: '+', suffix: '', note: 'Séances animées chaque mois' },
+  { label: 'Écoles accompagnées', value: 20, prefix: '+', suffix: '', note: 'Dans 3 départements' },
+  { label: 'Élèves sensibilisés', value: 1500, prefix: '+', suffix: '', note: 'Primaire, Fondamental et Secondaire' },
+  { label: 'Membres', value: 25, prefix: '+', suffix: '', note: 'Actifs et adhérents' },
+  { label: 'Ateliers et clubs actifs', value: 30, prefix: '+', suffix: '', note: 'Séances animées' },
 ];
 
 export const OBJECTIVES_DATA = [
@@ -342,7 +342,7 @@ export const GALLERY_DATA: GalleryPhoto[] = [
     url: TEAM_IMAGE,
     title: 'L\'Équipe dirigeante de l\'OPLEH sur le terrain',
     category: 'Citoyenneté',
-    location: 'Port-au-Prince / Limonade',
+    location: 'Gonaïves / Limonade',
     caption: 'Les fondateurs de l\'OPLEH mobilisés pour repenser la citoyenneté et promouvoir l\'écriture.',
   },
   {
@@ -366,7 +366,7 @@ export const GALLERY_DATA: GalleryPhoto[] = [
     url: DIGITAL_IMAGE,
     title: 'Espace d\'apprentissage numérique et bibliothèque virtuelle',
     category: 'Technologie',
-    location: 'Port-au-Prince / Delmas',
+    location: 'Nord / Nord-Est',
     caption: 'Les lycéens consultent l’anthologie numérique et les fiches méthodologiques de dissertation.',
   },
   {
