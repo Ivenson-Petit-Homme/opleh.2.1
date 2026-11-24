@@ -8,6 +8,7 @@ export const OPLEH_REAL_LOGO = '/assets/aistudio/image_50f9f44f.png';
 export const OPLEH_REAL_HERO = '/assets/aistudio/IMG_0422_b3264802.jpg';
 export const OPLEH_REAL_TEAM = '/assets/aistudio/CTP_2847_copy_2517481d.jpg';
 export const OPLEH_REAL_PRESENTING = '/assets/aistudio/DSC_7031_copie.jpg_91621e11.jpeg';
+export const OPLEH_FOUNDERS_IMAGE = '/assets/aistudio/PSX_20250802_232215_6edc247f.jpg';
 
 export const HERO_IMAGE = OPLEH_REAL_HERO;
 export const TEAM_IMAGE = OPLEH_REAL_TEAM;

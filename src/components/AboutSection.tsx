@@ -1,5 +1,5 @@
 import React from 'react';
-import { OBJECTIVES_DATA, VALUES_DATA, OPLEH_REAL_TEAM, OPLEH_REAL_PRESENTING } from '../data/content';
+import { OBJECTIVES_DATA, VALUES_DATA, OPLEH_FOUNDERS_IMAGE, OPLEH_REAL_PRESENTING } from '../data/content';
 import { NavSection } from '../types';
 import { PageHero, MotionReveal, StaggerGrid, StaggerItem } from './MotionPrimitives';
 import { Target, Compass, BookOpen, Users, Shield, HeartHandshake, Lightbulb, Sparkles, ArrowRight } from 'lucide-react';
@@ -58,9 +58,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onNavigate }) => {
             <MotionReveal direction="up" delay={0.12} className="lg:col-span-5">
               <div className="overflow-hidden shadow-xl border border-neutral-200 bg-[#080B33]">
                 <img
-                  src={OPLEH_REAL_TEAM}
-                  alt="L'Équipe fondatrice de l'OPLEH en Haïti"
-                  className="w-full h-96 object-cover object-top"
+                  src={OPLEH_FOUNDERS_IMAGE}
+                  alt="Équipe Dirigeante & Fondateurs de l'OPLEH en Haïti"
+                  className="w-full h-auto block"
                   referrerPolicy="no-referrer"
                 />
                 <div className="p-7 bg-[#0E134E] text-white border-t-4 border-[#E0291D]">
