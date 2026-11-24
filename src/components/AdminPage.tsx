@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavSection, NewsArticle } from '../types';
 import {
+  OPLEH_REAL_HERO,
   OPLEH_REAL_PRESENTING,
   OPLEH_REAL_TEAM,
   LIBRARY_IMAGE,
@@ -38,6 +39,7 @@ interface AdminPageProps {
 const ADMIN_PASSCODE = 'OPLEH2026';
 
 const PRESET_IMAGES = [
+  { label: 'Équipe & Jeunes OPLEH (Photo d’accueil)', url: OPLEH_REAL_HERO },
   { label: 'Conférence OPLEH (Photo réelle)', url: OPLEH_REAL_PRESENTING },
   { label: 'Équipe fondatrice OPLEH (Photo réelle)', url: OPLEH_REAL_TEAM },
   { label: 'Club de lecture en bibliothèque', url: LIBRARY_IMAGE },

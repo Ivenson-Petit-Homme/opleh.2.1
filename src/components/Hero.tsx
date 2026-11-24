@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Heart, ArrowRight } from 'lucide-react';
 import { motion } from 'motion/react';
-import { OPLEH_REAL_PRESENTING, OPLEH_REAL_TEAM } from '../data/content';
+import { OPLEH_REAL_HERO, OPLEH_REAL_PRESENTING, OPLEH_REAL_TEAM } from '../data/content';
 import { NavSection } from '../types';
 
 interface HeroProps {
@@ -15,11 +15,13 @@ export const Hero: React.FC<HeroProps> = ({
   onOpenDonate,
   heroImage,
 }) => {
-  const [activePhoto, setActivePhoto] = useState<'conference' | 'team'>('conference');
+  const [activePhoto, setActivePhoto] = useState<'accueil' | 'conference' | 'team'>('accueil');
 
   const selectedImage =
-    activePhoto === 'conference'
-      ? heroImage || OPLEH_REAL_PRESENTING
+    activePhoto === 'accueil'
+      ? heroImage || OPLEH_REAL_HERO
+      : activePhoto === 'conference'
+      ? OPLEH_REAL_PRESENTING
       : OPLEH_REAL_TEAM;
 
   return (
@@ -34,15 +36,15 @@ export const Hero: React.FC<HeroProps> = ({
       >
         <img
           src={selectedImage}
-          alt="Action de terrain OPLEH en Haïti"
-          className="w-full h-full object-cover object-center filter brightness-[0.75]"
+          alt="Action de terrain OPLEH avec les jeunes en Haïti"
+          className="w-full h-full object-cover object-[center_25%] filter brightness-[0.72]"
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/45 to-[#080B33]/35" />
       </motion.div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-10 text-center">
-        {/* Centered WWF Headline & Editorial Lockup (No card overlaying the photo) */}
+        {/* Centered Headline & Editorial Lockup */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +65,7 @@ export const Hero: React.FC<HeroProps> = ({
             L’Organisme de Promotion de la Lecture et de l’Écriture en Haïti (OPLEH) combat la crise des apprentissages. Par nos clubs de lecture, nos distributions de livres et la formation des enseignants, nous bâtissons l’autonomie de la jeunesse.
           </p>
 
-          {/* Centered WWF Action Buttons */}
+          {/* Centered Action Buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-3">
             <button
               onClick={onOpenDonate}
@@ -87,8 +89,16 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Subtle Bottom-Center Photo Switcher */}
       <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 bg-[#080B33]/80 backdrop-blur-xs px-3 py-1.5 border border-white/15">
         <button
+          onClick={() => setActivePhoto('accueil')}
+          className={`px-2.5 py-1 text-[11px] font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
+            activePhoto === 'accueil' ? 'bg-[#E0291D] text-white' : 'text-neutral-300 hover:text-white'
+          }`}
+        >
+          Équipe & Jeunes
+        </button>
+        <button
           onClick={() => setActivePhoto('conference')}
-          className={`px-2.5 py-1 text-[11px] font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer ${
+          className={`px-2.5 py-1 text-[11px] font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
             activePhoto === 'conference' ? 'bg-[#E0291D] text-white' : 'text-neutral-300 hover:text-white'
           }`}
         >
@@ -96,7 +106,7 @@ export const Hero: React.FC<HeroProps> = ({
         </button>
         <button
           onClick={() => setActivePhoto('team')}
-          className={`px-2.5 py-1 text-[11px] font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer ${
+          className={`px-2.5 py-1 text-[11px] font-wwf font-bold uppercase tracking-wider transition-colors cursor-pointer whitespace-nowrap ${
             activePhoto === 'team' ? 'bg-[#E0291D] text-white' : 'text-neutral-300 hover:text-white'
           }`}
         >
