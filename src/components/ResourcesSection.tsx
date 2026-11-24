@@ -53,7 +53,7 @@ export const ResourcesSection: React.FC<ResourcesSectionProps> = ({
         `Catégorie : ${res.categoryLabel}\n\n` +
         `--- RÉSUMÉ DU DOCUMENT ---\n${res.description}\n\n` +
         `--- EXTRAIT DU GUIDE / FICHE ---\n${res.sampleExcerpt}\n\n` +
-        `© 2026 OPLEH - Tous droits réservés. contact@opleh-haiti.org\n`,
+        `© 2026 OPLEH - Tous droits réservés. contact@opleh.org\n`,
       ],
       { type: 'text/plain;charset=utf-8' }
     );

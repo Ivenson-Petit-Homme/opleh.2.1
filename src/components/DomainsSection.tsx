@@ -161,7 +161,7 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                 <img
                   src={activeDomain.image}
                   alt={activeDomain.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/25 to-transparent flex flex-col justify-end p-6 text-white">
@@ -208,11 +208,11 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                     }`}
                   >
                     <div>
-                      <div className="relative h-44 overflow-hidden bg-[#080B33]">
+                      <div className="relative h-52 overflow-hidden bg-[#080B33]">
                         <img
                           src={domain.image}
                           alt={domain.title}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
                         <div className="absolute top-3 left-3 bg-[#E0291D] text-white font-wwf font-black text-xs px-2.5 py-1 uppercase">

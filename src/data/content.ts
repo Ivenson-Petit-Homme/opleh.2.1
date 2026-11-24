@@ -10,6 +10,12 @@ export const OPLEH_REAL_TEAM = '/assets/aistudio/CTP_2847_copy_2517481d.jpg';
 export const OPLEH_REAL_PRESENTING = '/assets/aistudio/DSC_7031_copie.jpg_91621e11.jpeg';
 export const OPLEH_FOUNDERS_IMAGE = '/assets/aistudio/PSX_20250802_232215_6edc247f.jpg';
 
+export const DOMAIN_FORMATION_IMAGE = '/assets/aistudio/57.jpg_b8b37120.jpeg';
+export const DOMAIN_TECH_IMAGE = '/assets/aistudio/PSX_20250802_232745_15febe37.jpg';
+export const DOMAIN_LIBRARY_IMAGE = '/assets/aistudio/WhatsApp_Image_2025-03-13___18.06.46_139937bc.jpg_da0208d4.jpeg';
+export const DOMAIN_CULTURE_IMAGE = '/assets/aistudio/35.jpg_0e8b21a8.jpeg';
+export const DOMAIN_CITIZENSHIP_IMAGE = '/assets/aistudio/IMG-20250409-WA0017_6e3ba132.jpg';
+
 export const HERO_IMAGE = OPLEH_REAL_HERO;
 export const TEAM_IMAGE = OPLEH_REAL_TEAM;
 export const LIBRARY_IMAGE = libraryClubImg;
@@ -82,7 +88,7 @@ export const DOMAINS_DATA: DomainItem[] = [
     title: 'Formation des enseignants',
     summary: 'Renforcer les compétences didactiques des éducateurs qui façonnent l’esprit des générations futures.',
     description: 'La place des enseignants est cruciale dans le développement intellectuel des enfants qui passent la majeure partie de leur journée avec eux. L\'OPLEH considère les professeurs comme les piliers de la transmission et collabore étroitement avec eux afin de moderniser et fortifier leurs pratiques pédagogiques en lecture et expression écrite.',
-    image: WORKSHOP_IMAGE,
+    image: DOMAIN_FORMATION_IMAGE,
     iconName: 'GraduationCap',
     levers: [
       'Organisation d’ateliers de perfectionnement sur les meilleures pratiques d’enseignement de la lecture et de l’écriture',
@@ -97,7 +103,7 @@ export const DOMAINS_DATA: DomainItem[] = [
     title: 'Technologie éducative',
     summary: 'Démocratiser l’accès aux savoirs grâce au numérique et aux bibliothèques virtuelles.',
     description: 'Les innovations technologiques transforment les approches d’enseignement et ouvrent des opportunités inédites d’accès aux savoirs pour les enfants haïtiens. L\'OPLEH mobilise le numérique comme un formidable levier d’inclusion afin de dépasser les barrières matérielles et géographiques.',
-    image: DIGITAL_IMAGE,
+    image: DOMAIN_TECH_IMAGE,
     iconName: 'Laptop',
     levers: [
       'Développement d’applications interactives et de plateformes de lecture numérique adaptées aux connexions réduites',
@@ -112,7 +118,7 @@ export const DOMAINS_DATA: DomainItem[] = [
     title: 'Approvisionnement des bibliothèques',
     summary: 'Créer des sanctuaires de lecture chaleureux et approvisionnés en livres de qualité.',
     description: 'Les bibliothèques sont les foyers où les lecteurs se rassemblent, cultivent leur soif de savoir et élargissent leurs horizons intellectuels. L’accès direct à une variété de livres physiques demeure la condition première pour faire naître chez l’écolier le plaisir irrésistible de tourner les pages.',
-    image: LIBRARY_IMAGE,
+    image: DOMAIN_LIBRARY_IMAGE,
     iconName: 'Library',
     levers: [
       'Dons réguliers d’ouvrages jeunesse et de littérature haïtienne aux bibliothèques scolaires et communautaires',
@@ -127,7 +133,7 @@ export const DOMAINS_DATA: DomainItem[] = [
     title: 'Promotion culturelle',
     summary: 'Valoriser les trésors de la littérature haïtienne et faire émerger les plumes de demain.',
     description: 'Promouvoir la lecture consiste à forger une culture durable qui célèbre nos auteurs et encourage l’enfant à chérir son patrimoine linguistique. À travers nos événements culturels, les jeunes découvrent les chefs-d’œuvre des écrivains haïtiens (Roumain, Frankétienne, Lahens, Trouillot) tout en explorant la littérature internationale.',
-    image: DISTRIBUTION_IMAGE,
+    image: DOMAIN_CULTURE_IMAGE,
     iconName: 'Sparkles',
     levers: [
       'Organisation de clubs de lecture hebdomadaires animés par des passionnés de littérature',
@@ -142,7 +148,7 @@ export const DOMAINS_DATA: DomainItem[] = [
     title: 'Éducation citoyenne',
     summary: 'Développer l’esprit critique et former des citoyens conscients, tolérants et engagés.',
     description: 'La lecture est un outil démocratique puissant pour développer la pensée critique et l’autonomie de jugement. L\'OPLEH encourage l\'engagement républicain et civique des jeunes en leur apprenant à analyser l\'information, à débattre avec rigueur et à défendre des valeurs de justice et de solidarité.',
-    image: HERO_IMAGE,
+    image: DOMAIN_CITIZENSHIP_IMAGE,
     iconName: 'ShieldCheck',
     levers: [
       'Développement de modules thématiques sur la citoyenneté, l\'histoire haïtienne, l\'environnement et les droits humains',

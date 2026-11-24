@@ -224,7 +224,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenDonate }) => {
                 </div>
                 <div className="flex items-center gap-2">
                   <Mail className="w-4 h-4 text-[#E0291D] shrink-0" />
-                  <span>contact@opleh-haiti.org</span>
+                  <span>contact@opleh.org</span>
                 </div>
               </div>
 

@@ -95,16 +95,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onNavigate }) =>
                     <div>
                       <div className="font-bold text-neutral-900">Courriel officiel</div>
                       <a
-                        href="mailto:contact@opleh-haiti.org"
+                        href="mailto:contact@opleh.org"
                         className="text-xs text-[#E0291D] font-bold hover:underline block mt-0.5"
                       >
-                        contact@opleh-haiti.org
-                      </a>
-                      <a
-                        href="mailto:partenariats@opleh-haiti.org"
-                        className="text-xs text-neutral-500 hover:underline block"
-                      >
-                        partenariats@opleh-haiti.org
+                        contact@opleh.org
                       </a>
                     </div>
                   </div>

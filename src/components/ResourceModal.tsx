@@ -43,7 +43,7 @@ export const ResourceModal: React.FC<ResourceModalProps> = ({ resource, onClose 
         `--- DESCRIPTION ---\n${resource.description}\n\n` +
         `--- EXTRAIT ET PLAN DU DOCUMENT ---\n${resource.sampleExcerpt}\n\n` +
         `© 2026 Organisation pour la Promotion de la Lecture et de l'Écriture en Haïti (OPLEH)\n` +
-        `contact@opleh-haiti.org | www.opleh-haiti.org\n`
+        `contact@opleh.org | www.opleh.org\n`
       ],
       { type: 'text/plain;charset=utf-8' }
     );
