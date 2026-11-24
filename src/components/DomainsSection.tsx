@@ -157,8 +157,8 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
               </div>
 
               {/* Right / Visual Column - 100% full uncropped photo */}
-              <div className="lg:col-span-5 bg-[#080B33] flex flex-col justify-between">
-                <div className="w-full flex-1 flex items-center justify-center bg-[#080B33] overflow-hidden">
+              <div className="lg:col-span-5 bg-[#0E134E] flex flex-col justify-between border-t lg:border-t-0 lg:border-l border-neutral-200">
+                <div className="w-full bg-[#080B33] overflow-hidden">
                   <img
                     src={activeDomain.image}
                     alt={activeDomain.title}
@@ -166,7 +166,7 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <div className="p-6 bg-[#0E134E] border-t-4 border-[#E0291D] text-white">
+                <div className="p-6 bg-[#0E134E] border-t-4 border-[#E0291D] text-white flex-1 flex flex-col justify-center">
                   <div className="text-xs font-wwf font-black text-[#E0291D] uppercase tracking-wider mb-1">
                     OPLEH sur le terrain
                   </div>

@@ -101,11 +101,11 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                     onClick={() => onSelectArticle(leadArticle)}
                     className="grid grid-cols-1 lg:grid-cols-12 border border-neutral-200 bg-white hover:shadow-xl transition-all duration-300 cursor-pointer group overflow-hidden"
                   >
-                    <div className="lg:col-span-7 relative min-h-[280px] sm:min-h-[380px] bg-[#080B33] overflow-hidden">
+                    <div className="lg:col-span-7 relative w-full aspect-[3/2] lg:aspect-auto lg:min-h-[420px] bg-[#080B33] overflow-hidden">
                       <img
                         src={leadArticle.image}
                         alt={leadArticle.title}
-                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute top-4 left-4 bg-[#E0291D] text-white font-wwf font-black uppercase text-xs px-3 py-1">
@@ -163,11 +163,11 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                         className="bg-white border border-neutral-200 overflow-hidden hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer h-full"
                       >
                         <div>
-                          <div className="relative h-52 overflow-hidden bg-[#080B33]">
+                          <div className="relative w-full aspect-[3/2] overflow-hidden bg-[#080B33]">
                             <img
                               src={article.image}
                               alt={article.title}
-                              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                              className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
                               referrerPolicy="no-referrer"
                             />
                             <div className="absolute bottom-3 left-3 text-xs font-wwf font-black uppercase text-white bg-[#E0291D] px-2.5 py-1">

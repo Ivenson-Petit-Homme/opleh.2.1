@@ -59,7 +59,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({ onSelectPhoto })
             <StaggerItem key={photo.id}>
               <div
                 onClick={() => onSelectPhoto(photo)}
-                className="group relative overflow-hidden bg-[#0E134E] aspect-4/3 cursor-pointer border border-[#1E2985] hover:border-[#E0291D] transition-all duration-300"
+                className="group relative overflow-hidden bg-[#0E134E] aspect-[3/2] cursor-pointer border border-[#1E2985] hover:border-[#E0291D] transition-all duration-300"
               >
                 <img
                   src={photo.url}

@@ -39,7 +39,7 @@ interface AdminPageProps {
   onNavigate: (section: NavSection) => void;
 }
 
-const ADMIN_PASSCODE = 'OPLEH2026';
+const ADMIN_PASSCODE = '24Juillet2024@@';
 
 const PRESET_IMAGES = [
   { label: 'Premier anniversaire OPLEH (Club Franckétienne)', url: NEWS_ANNIVERSARY_IMAGE },
@@ -85,7 +85,7 @@ export const AdminPage: React.FC<AdminPageProps> = ({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    if (passcodeInput.trim().toUpperCase() === ADMIN_PASSCODE) {
+    if (passcodeInput.trim() === ADMIN_PASSCODE) {
       sessionStorage.setItem('opleh_admin_auth', 'true');
       setIsAuthenticated(true);
       setAuthError('');

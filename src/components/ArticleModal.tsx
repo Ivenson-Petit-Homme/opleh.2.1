@@ -46,11 +46,11 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose }) 
       {/* Modal Dialog */}
       <div className="relative bg-white max-w-3xl w-full max-h-[90vh] overflow-y-auto shadow-2xl border border-neutral-200 border-t-4 border-t-[#E0291D] z-10 flex flex-col">
         {/* Header Photo */}
-        <div className="relative h-64 sm:h-80 w-full bg-[#080B33] shrink-0">
+        <div className="relative w-full aspect-[3/2] max-h-[440px] bg-[#080B33] shrink-0">
           <img
             src={article.image}
             alt={article.title}
-            className="w-full h-full object-cover object-top"
+            className="w-full h-full object-cover object-center"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/25 to-[#080B33]/30" />
