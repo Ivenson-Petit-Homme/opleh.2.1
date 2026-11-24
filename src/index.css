@@ -1,24 +1,50 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Franklin Gothic Book', 'Franklin Gothic', 'Libre Franklin', system-ui, -apple-system, sans-serif;
+}
+
 @layer base {
   body {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-family: 'Franklin Gothic Book', 'Franklin Gothic', 'Libre Franklin', system-ui, -apple-system, sans-serif;
+    font-weight: 400;
     color: #111827;
   }
-  h1, h2, h3, h4, .font-heading, .font-wwf {
-    font-family: 'Barlow Condensed', 'Montserrat', sans-serif;
-    letter-spacing: -0.02em;
+
+  h1, h2, h3, h4, .font-heading, .font-wwf, strong, b {
+    font-family: 'Franklin Gothic Demi', 'Franklin Gothic Medium', 'Libre Franklin', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.015em;
   }
 }
 
-/* WWF button and accent helpers */
+/* Franklin Gothic Demi for all bold/emphasis text classes */
+.font-semibold,
+.font-bold,
+.font-extrabold,
+.font-black,
+.font-wwf,
+.font-heading {
+  font-family: 'Franklin Gothic Demi', 'Franklin Gothic Medium', 'Libre Franklin', system-ui, -apple-system, sans-serif;
+}
+
+.font-black,
+.font-extrabold {
+  font-weight: 700;
+}
+
+.font-bold,
+.font-semibold {
+  font-weight: 600;
+}
+
+/* OPLEH button and accent helpers (Franklin Gothic Demi) */
 .wwf-btn-primary {
   background-color: #E0291D;
   color: #ffffff;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Franklin Gothic Demi', 'Franklin Gothic Medium', 'Libre Franklin', sans-serif;
   text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   transition: all 0.2s ease;
 }
 .wwf-btn-primary:hover {
@@ -29,10 +55,10 @@
 .wwf-btn-dark {
   background-color: #0E134E;
   color: #ffffff;
-  font-family: 'Barlow Condensed', sans-serif;
+  font-family: 'Franklin Gothic Demi', 'Franklin Gothic Medium', 'Libre Franklin', sans-serif;
   text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   transition: all 0.2s ease;
 }
 .wwf-btn-dark:hover {
