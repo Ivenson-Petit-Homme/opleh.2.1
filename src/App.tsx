@@ -76,10 +76,21 @@ function loadStoredArticles(): NewsArticle[] {
     if (!raw) return NEWS_DATA;
     const parsed = JSON.parse(raw);
     if (Array.isArray(parsed) && parsed.length > 0) {
-      return parsed.map((art: NewsArticle) => ({
-        ...art,
-        image: normalizeImageUrl(art.image),
-      }));
+      const defaultsById = new Map(NEWS_DATA.map((d) => [d.id, d.image]));
+      return parsed.map((art: NewsArticle) => {
+        const normalized = normalizeImageUrl(art.image);
+        const defaultImg = defaultsById.get(art.id);
+        const isLegacyDefault =
+          !normalized ||
+          normalized.includes('IMG_0422_b3264802.jpg') ||
+          normalized.includes('IMG_4148_2efedeef.JPG') ||
+          normalized.includes('library_reading_club') ||
+          normalized.includes('teacher_pedagogical_workshop');
+        return {
+          ...art,
+          image: defaultImg && isLegacyDefault ? defaultImg : normalized,
+        };
+      });
     }
     return NEWS_DATA;
   } catch {

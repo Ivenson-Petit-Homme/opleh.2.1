@@ -156,15 +156,17 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                 </div>
               </div>
 
-              {/* Right / Visual Column */}
-              <div className="lg:col-span-5 relative bg-[#080B33] min-h-[320px] lg:min-h-full">
-                <img
-                  src={activeDomain.image}
-                  alt={activeDomain.title}
-                  className="w-full h-full object-cover object-top"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080B33]/90 via-[#0E134E]/25 to-transparent flex flex-col justify-end p-6 text-white">
+              {/* Right / Visual Column - 100% full uncropped photo */}
+              <div className="lg:col-span-5 bg-[#080B33] flex flex-col justify-between">
+                <div className="w-full flex-1 flex items-center justify-center bg-[#080B33] overflow-hidden">
+                  <img
+                    src={activeDomain.image}
+                    alt={activeDomain.title}
+                    className="w-full h-auto block"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="p-6 bg-[#0E134E] border-t-4 border-[#E0291D] text-white">
                   <div className="text-xs font-wwf font-black text-[#E0291D] uppercase tracking-wider mb-1">
                     OPLEH sur le terrain
                   </div>
@@ -208,14 +210,14 @@ export const DomainsSection: React.FC<DomainsSectionProps> = ({ onNavigate, onOp
                     }`}
                   >
                     <div>
-                      <div className="relative h-52 overflow-hidden bg-[#080B33]">
+                      <div className="relative w-full overflow-hidden bg-[#080B33]">
                         <img
                           src={domain.image}
                           alt={domain.title}
-                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-auto block group-hover:scale-[1.03] transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
-                        <div className="absolute top-3 left-3 bg-[#E0291D] text-white font-wwf font-black text-xs px-2.5 py-1 uppercase">
+                        <div className="absolute top-3 left-3 bg-[#E0291D] text-white font-wwf font-black text-xs px-2.5 py-1 uppercase shadow-sm">
                           Axe {domain.number}
                         </div>
                       </div>

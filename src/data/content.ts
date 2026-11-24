@@ -16,6 +16,10 @@ export const DOMAIN_LIBRARY_IMAGE = '/assets/aistudio/WhatsApp_Image_2025-03-13_
 export const DOMAIN_CULTURE_IMAGE = '/assets/aistudio/35.jpg_0e8b21a8.jpeg';
 export const DOMAIN_CITIZENSHIP_IMAGE = '/assets/aistudio/IMG-20250409-WA0017_6e3ba132.jpg';
 
+export const NEWS_PEACE_DAY_IMAGE = '/assets/aistudio/CTP_2830_copy_678a0cb2.jpg';
+export const NEWS_CAUSERIES_IMAGE = '/assets/aistudio/IMG_3398.jpg_a3b05e6b.jpeg';
+export const NEWS_ANNIVERSARY_IMAGE = '/assets/aistudio/WhatsApp_Image_2026-03-21_at_21.37.27_dc409e4b.jpeg';
+
 export const HERO_IMAGE = OPLEH_REAL_HERO;
 export const TEAM_IMAGE = OPLEH_REAL_TEAM;
 export const LIBRARY_IMAGE = libraryClubImg;
@@ -172,7 +176,7 @@ export const NEWS_DATA: NewsArticle[] = [
       'Placé sous la devise « Lecture, écriture et communauté », ce club a pour vocation d’offrir aux élèves des cycles fondamentaux et secondaires un cadre chaleureux et rigoureux pour apprivoiser le livre, s’initier aux techniques de rédaction créative et débattre librement des grandes œuvres haïtiennes.',
       '« Le génie littéraire de Frankétienne incarne l’audace des mots et la résistance créatrice de notre peuple. Nous voulons transmettre cette flamme à chaque écolier haïtien », a rappelé l’équipe de direction lors de la cérémonie de lancement.',
     ],
-    image: HERO_IMAGE,
+    image: NEWS_ANNIVERSARY_IMAGE,
     author: 'Direction de la Rédaction OPLEH',
   },
   {
@@ -187,7 +191,7 @@ export const NEWS_DATA: NewsArticle[] = [
       'Les jeunes participants ont pris part à des ateliers d’écriture de plaidoyers pacifistes, à des concours de lecture expressive et à des échanges inter-établissements sur le vivre-ensemble et la non-violence en milieu scolaire.',
       'Cette initiative illustre la conviction fondamentale de l’OPLEH : un enfant qui lit et qui maîtrise l’écriture développe un esprit critique et une tolérance qui en font un artisan de paix dans sa communauté.',
     ],
-    image: LIBRARY_IMAGE,
+    image: NEWS_PEACE_DAY_IMAGE,
     author: 'Pôle Artibonite · OPLEH Gonaïves',
   },
   {
@@ -202,7 +206,7 @@ export const NEWS_DATA: NewsArticle[] = [
       'Face au taux alarmant d’abandons lors des premières années d’études supérieures en Haïti, les animateurs ont guidé les lycéens dans l’élaboration de projets professionnels cohérents et le renforcement de leur méthode de dissertation.',
       'Des lots de dictionnaires, d’ouvrages didactiques et de livrets méthodologiques ont été remis gratuitement aux bibliothèques des collèges et lycées partenaires de la région.',
     ],
-    image: WORKSHOP_IMAGE,
+    image: NEWS_CAUSERIES_IMAGE,
     author: 'Mission Pédagogique Grand Nord',
   },
 ];

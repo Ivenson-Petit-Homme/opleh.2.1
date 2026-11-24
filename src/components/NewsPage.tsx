@@ -105,7 +105,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                       <img
                         src={leadArticle.image}
                         alt={leadArticle.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute top-4 left-4 bg-[#E0291D] text-white font-wwf font-black uppercase text-xs px-3 py-1">
@@ -167,7 +167,7 @@ export const NewsPage: React.FC<NewsPageProps> = ({
                             <img
                               src={article.image}
                               alt={article.title}
-                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                              className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                               referrerPolicy="no-referrer"
                             />
                             <div className="absolute bottom-3 left-3 text-xs font-wwf font-black uppercase text-white bg-[#E0291D] px-2.5 py-1">
